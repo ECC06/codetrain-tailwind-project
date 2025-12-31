@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="output.css" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+            type="module"
+        ></script>
+    </head>
+
+    <body class="relative flex flex-col items-center gap-20 -z-1000">
+        <!-- navbar and hero -->
+        <div class="wrapper -z-1">
+            <nav class="relative py-5 bg-white">
+                <div class="relative flex items-center justify-between w-full">
+                    <!-- logo -->
+                    <img
+                        src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6759133e8734562de6520966_Logo%203.svg"
+                        loading="lazy"
+                        alt="logo"
+                        class="logo w-[32.5] h-10 md:w-43.75 md:h-12.5"
+                    />
+
+                    <!-- right buttons -->
+                    <div
+                        class="flex items-center gap-7 lg:w-full lg:justify-between"
+                    >
+                        <!-- get started button -->
+                        <a
+                            href="./contact.html"
+                            class="flex h-full text-xl font-medium max-md:hidden group lg:order-2"
+                        >
+                            <span
+                                class="flex items-center px-6 py-4 border rounded-full"
+                                >Get started</span
+                            >
+                            <span
+                                class="rounded-[50%] bg-drk-green size-15.5 flex flex-center"
+                            >
+                                <svg
+                                    class="transition ease-out -rotate-45 duration-750 group-hover:rotate-0"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="#ffffff"
+                                        d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+
+                        <!-- navbar button -->
+
+                        <label
+                            for="check"
+                            class="lg:hidden peer flex items-center justify-center bg-lime-green w-10 h-10 rounded-[50%] md:size-16 cursor-pointer has-checked:bg-drk-green"
+                        >
+                            <input
+                                type="checkbox"
+                                id="check"
+                                class="hidden peer"
+                            />
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 72 72"
+                                class="size-5 md:size-8 peer-checked:fill-white"
+                            >
+                                <path
+                                    d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z"
+                                ></path>
+                            </svg>
+                        </label>
+
+                        <ul
+                            class="border-[1.3px] -z-1 absolute top-0 left-0 py-2 translate-y-[-120%] w-full rounded-lg bg-gray-4 peer-has-checked:translate-y-15 peer-has-checked:md:translate-y-21 transition-[translate] duration-500 ease-out lg:z-auto lg:-0 lg:static lg:inset-0 lg:translate-y-0 lg:flex lg:gap-2 lg:order-1 lg:w-fit lg:py-0 lg:bg-transparent lg:rounded-none lg:border-none lg:mx-auto lg:transition-none"
+                        >
+                            <li class="nav-li-elem">
+                                <a href="#" class="nav-anchor-elem">Home</a>
+                            </li>
+                            <li class="nav-li-elem">
+                                <a href="#" class="nav-anchor-elem">About</a>
+                            </li>
+                            <li class="nav-li-elem">
+                                <details>
+                                    <summary
+                                        class="flex items-center justify-between list-none"
+                                    >
+                                        <span
+                                            class="cursor-pointer nav-anchor-elem"
+                                            >Pages</span
+                                        >
+                                        <span
+                                            class="cursor-pointer material-symbols-outlined"
+                                        >
+                                        </span>
+                                    </summary>
+                                    <ul
+                                        class="border rounded-md my-3 py-2 [&>li]:px-2 [&>li]:py-1 lg:absolute lg:top-10 lg:bg-gray-4 lg:w-50 lg:my-0 right-0"
+                                    >
+                                        <li>
+                                            <a
+                                                href="#"
+                                                class="pages-dropdown-anchor-elem"
+                                                >Home</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="#"
+                                                class="pages-dropdown-anchor-elem"
+                                                >About</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="#"
+                                                class="pages-dropdown-anchor-elem"
+                                                >Classes</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="#"
+                                                class="pages-dropdown-anchor-elem"
+                                                >Packages</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="#"
+                                                class="pages-dropdown-anchor-elem"
+                                                >Blog</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="#"
+                                                class="pages-dropdown-anchor-elem"
+                                                >Contact</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="#"
+                                                class="pages-dropdown-anchor-elem"
+                                                >Privacy Policy</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li class="nav-li-elem">
+                                <a href="#" class="nav-anchor-elem">Classes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <header
+                class="bg-drk-green rounded-lg text-white px-5 pt-5 pb-0 relative -z-2 md:bg-[linear-gradient(100deg,var(--color-drk-green),var(--color-drk-green),transparent),url(https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67541edce848d98aa31289bb_bc0f30c5d0f4115ed9724983d546ec13_hero-image.avif)] md:bg-no-repeat md:bg-cover md:pt-12 md:px-10 md:rounded-3xl"
+            >
+                <div class="md:pr-[15%] lg:pr-[30%] xl:pr-[50%]">
+                    <div class="flex flex-col gap-4">
+                        <span
+                            class="text-[clamp(1.25rem,1.25vw+1rem,2rem)] font-[GeneralSans] font-semibold"
+                            >Hi, I'm Mike</span
+                        >
+
+                        <h1>
+                            Your
+                            <span class="text-lime-green">fitness </span>trainer
+                        </h1>
+
+                        <p class="md:pr-25">
+                            Transform your body and mind with personalized
+                            workout plans tailored to your goals. Reach new
+                            heights in your fitness journey with tailored
+                            training programs.
+                        </p>
+
+                        <a
+                            href="./about.html"
+                            class="mt-3 link-with-arrow-icon group"
+                        >
+                            <span class="lime-btn bg-lime-green text-drk-green"
+                                >Book a class</span
+                            >
+                            <span class="bg-white btn-with-arrow flex-center">
+                                <svg
+                                    class="group-hover:rotate-0"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <img
+                        class="mt-5 rounded-xl md:hidden"
+                        src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67541edce848d98aa31289bb_bc0f30c5d0f4115ed9724983d546ec13_hero-image.avif"
+                        alt="Image of Mike"
+                    />
+                </div>
+
+                <div
+                    class="mt-2 text-center min-[540px]:text-[50px] text-3xl font-bold text-[#ffffff19] leading-none md:mt-6 md:translate-y-6 md:text-[clamp(4.375rem,10.121vw+-0.597rem,7.5rem)]"
+                >
+                    GET STRONGER
+                </div>
+            </header>
+        </div>
+
+        <!-- what's your fitness dream -->
+        <section class="wrapper">
+            <!-- heading and arrows -->
+            <div class="flex items-center justify-between">
+                <h2>What's your fitness dream</h2>
+                <div class="hidden md:flex md:gap-5">
+                    <span
+                        class="bg-white border border-gray-300 rounded-full flex-center bottom-5 right-5 size-12"
+                    >
+                        <svg
+                            class="fill-gray-300 rotate-y-180"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                            />
+                        </svg>
+                    </span>
+
+                    <span
+                        class="bg-white border border-gray-300 rounded-full flex-center bottom-5 right-5 size-12"
+                    >
+                        <svg
+                            class="fill-gray-300"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                            />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <!-- container of options, e.g "personal training" -->
+            <div class="flex flex-col gap-8 mt-5 md:mt-12 md:flex-row">
+                <!-- option 1 -->
+                <div
+                    class="flex flex-col justify-between w-full bg-gray-4 rounded-2xl"
+                >
+                    <!-- heading and text -->
+                    <div class="px-4 py-5">
+                        <h3>Personal training</h3>
+                        <p class="mt-2">
+                            Get one-on-one coaching with customized workout
+                            plans designed meet your specific fitness goals.
+                        </p>
+                    </div>
+
+                    <!-- image and icon -->
+                    <div
+                        class="relative w-full overflow-hidden rounded-2xl group"
+                    >
+                        <img
+                            class="w-full transition duration-500 ease-in-out group-hover:scale-125"
+                            src="https://cdn.prod.website-files.com/6687b74737730a710569f0f6/67569d4ec3bdce1f0fd88ef9_service-image-01.jpg"
+                            alt="Image of a lady being trained on squats"
+                        />
+                        <span
+                            class="absolute bg-white rounded-full icon flex-center bottom-5 right-5 size-12"
+                        >
+                            <svg
+                                class="group-hover:rotate-0 fill-drk-green"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                                />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- option 2 -->
+                <div
+                    class="hidden w-full bg-gray-3 rounded-2xl md:flex md:flex-col md:justify-between"
+                >
+                    <!-- heading and text -->
+                    <div class="px-4 py-5">
+                        <h3>Nutritional Guidance</h3>
+                        <p class="mt-2">
+                            Receive expert advice on meal planning and nutrition
+                            to complement your trainer.
+                        </p>
+                    </div>
+
+                    <!-- image and icon -->
+                    <div
+                        class="relative w-full overflow-hidden rounded-2xl group"
+                    >
+                        <img
+                            class="w-full transition duration-500 ease-in-out group-hover:scale-125"
+                            src="https://cdn.prod.website-files.com/6687b74737730a710569f0f6/67569d59dbd57ec22963e003_service-image-02.jpg"
+                            alt="Image of a lady being trained on squats"
+                        />
+                        <span
+                            class="absolute bg-white rounded-full icon flex-center bottom-5 right-5 size-12"
+                        >
+                            <svg
+                                class="group-hover:rotate-0 fill-drk-green"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                                />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- option 3 -->
+                <div
+                    class="hidden w-full bg-gray-4 rounded-2xl lg:flex lg:flex-col lg:justify-between"
+                >
+                    <!-- heading and text -->
+                    <div class="px-4 py-5">
+                        <h3>Online coaching</h3>
+                        <p class="mt-2">
+                            Achieve your fitness goals from the comfort of your
+                            home with virtual training sessions.
+                        </p>
+                    </div>
+
+                    <!-- image and icon -->
+                    <div
+                        class="relative w-full overflow-hidden rounded-2xl group"
+                    >
+                        <img
+                            class="w-full transition duration-500 ease-in-out group-hover:scale-125"
+                            src="https://cdn.prod.website-files.com/6687b74737730a710569f0f6/67569d63c4990d749c71dd2a_service-image-03.jpg"
+                            alt="Image of a lady being trained on squats"
+                        />
+                        <span
+                            class="absolute bg-white rounded-full icon flex-center bottom-5 right-5 size-12"
+                        >
+                            <svg
+                                class="group-hover:rotate-0 fill-drk-green"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                                />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-5 mt-4 md:hidden">
+                <span
+                    class="bg-white border border-gray-300 rounded-full flex-center bottom-5 right-5 size-12"
+                >
+                    <svg
+                        class="fill-gray-300 rotate-y-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                        />
+                    </svg>
+                </span>
+
+                <span
+                    class="bg-white border border-gray-300 rounded-full flex-center bottom-5 right-5 size-12"
+                >
+                    <svg
+                        class="fill-gray-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                        />
+                    </svg>
+                </span>
+            </div>
+        </section>
+
+        <!-- experienced personal trainer -->
+        <section
+            class="md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-7 md:gap-y-20 wrapper"
+        >
+            <!-- 14+ years of experience cont -->
+            <div class="border-drk-green relative rounded-3xl">
+                <img
+                    class="h-full object-cover rounded-[inherit]"
+                    src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6753eac8e848d98aa3f6b487_about-image.avif"
+                    alt="Personal trainer helping a lady train with a dumbbell"
+                />
+
+                <div class="absolute bottom-7 right-4 text-white">
+                    <span
+                        class="text-[100px] font-extrabold lg:text-[150px] text-lime-green leading-none"
+                        >14+</span
+                    >
+                    <div class="text-base text-white font-bold md:text-xl">
+                        Years of Experience
+                    </div>
+                </div>
+            </div>
+
+            <!-- who i am cont -->
+            <div
+                class="max-md:mt-8 flex flex-col gap-12 md:py-10 md:justify-between"
+            >
+                <!-- who i am div -->
+                <div class="flex flex-col gap-4">
+                    <span class="text-lg text-drk-green font-bold md:text-5"
+                        >Who I Am</span
+                    >
+                    <h2>Experienced personal trainer</h2>
+                    <p>
+                        My approach combines science-backed training techniques
+                        with personalized workout plans designed specifically
+                        for your goals—building muscle, losing weight, or
+                        improving overall health.
+                    </p>
+
+                    <a href="./about.html" class="group link-with-arrow-icon">
+                        <span class="lime-btn">Get to know me</span>
+                        <span class="bg-black btn-with-arrow flex-center">
+                            <svg
+                                class="group-hover:rotate-0 fill-white"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                                />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <hr class="text-gray-2" />
+
+                <div>
+                    <h3>Certifications</h3>
+
+                    <ul class="mt-4 certifications-list">
+                        <li>Certified personal trainer</li>
+                        <li>Nutrition specialist</li>
+                        <li>Strength and conditioning coach</li>
+                        <li>Trusted by hundreds</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- helping you achieve container -->
+            <article
+                class="max-md:mt-16 md:col-span-2 md:flex rounded-4xl md:h-125"
+            >
+                <!-- video -->
+                <div
+                    class="relative h-[50%] rounded-tl-[inherit] rounded-tr-[inherit] md:rounded-tr-none md:rounded-bl-[inherit] md:h-full"
+                >
+                    <video
+                        class="rounded-tl-[inherit] rounded-tr-[inherit] md:rounded-tr-none w-full h-full md:rounded-bl-[inherit] object-cover"
+                        autoplay
+                        loop
+                    >
+                        <source
+                            src="https://www.pexels.com/download/video/8343373/"
+                        />
+                    </video>
+
+                    <!-- fake pause icon -->
+                    <span
+                        class="bg-white rounded-[50%] size-13 flex flex-center absolute bottom-5 right-5"
+                    >
+                        <img
+                            src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756b100a67f2b6cb1bde5b7_play-icon.svg"
+                            alt="Pause icon"
+                        />
+                    </span>
+                </div>
+
+                <!-- text container -->
+                <div
+                    class="bg-drk-green h-[50%] py-11 px-6 flex flex-col gap-5 rounded-bl-[inherit] rounded-br-[inherit] text-white md:rounded-bl-none md:rounded-tr-[inherit] md:h-full"
+                >
+                    <h2
+                        class="text-[clamp(1.375rem,1.667vw+1.042rem,2.375rem)] text-white"
+                    >
+                        Helping you achieve your fitness potential is my
+                        mission.
+                    </h2>
+
+                    <!-- mike vasquez quote -->
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="size-10"
+                                version="1.1"
+                                id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 290.658 290.658"
+                                xml:space="preserve"
+                                fill="#ffffff"
+                                stroke="#ffffff"
+                            >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <rect
+                                                y="139.474"
+                                                style="fill: #ffffff"
+                                                width="290.658"
+                                                height="11.711"
+                                            ></rect>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="text-base">Mike Vasquez</span>
+                        </div>
+                    </div>
+
+                    <!-- socials -->
+                    <div>
+                        <p class="text-base">Follow me:</p>
+                        <div
+                            class="flex gap-4 mt-3 [&>a]:bg-lime-green [&>a]:rounded-lg [&>a]:p-1 [&>a>img]:size-5"
+                        >
+                            <a href="#">
+                                <img
+                                    src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756bdf9ea6713ed5d05a42d_facebook.svg"
+                                    alt="Facebook icon"
+                                />
+                            </a>
+                            <a href="#">
+                                <img
+                                    src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/675bcd60bd1b8a5d457847be_linkdin.svg"
+                                    alt="Linkedin icon"
+                                />
+                            </a>
+                            <a href="#">
+                                <img
+                                    src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756bdf9a58ca16e48d8e66f_youtube.svg"
+                                    alt="Youtube icon"
+                                />
+                            </a>
+                            <a href="#">
+                                <img
+                                    src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756bdf9865da3dddcac3e63_instagram.svg"
+                                    alt="Instagram icon"
+                                />
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- todo: add strength text -->
+                </div>
+            </article>
+        </section>
+
+        <section class="mt-20">hi</section>
+    </body>
+</html>
