@@ -44,6 +44,8 @@
 	--text-h1: clamp(2.625rem, 8.909vw + 0.843rem, 5.125rem);
 	--text-h2: clamp(2.25rem, 1.705vw + 1.909rem, 3rem);
 	--text-h3: clamp(1.5rem, 0.893vw + 1.321rem, 1.75rem);
+
+    --testimonial-image-size: 70px;
 }
 
 @layer base {
@@ -56,6 +58,10 @@
 		font-size: 18px;
 		font-family: "DM Sans Variable", sans-serif;
 	}
+
+    .margin-top {
+        margin-top: 500px;
+    }
 }
 
 @layer components {

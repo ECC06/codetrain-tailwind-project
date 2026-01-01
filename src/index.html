@@ -17,7 +17,7 @@
     </head>
 
     <body class="relative flex flex-col items-center gap-20 -z-1000">
-        <!-- navbar and hero -->
+        <!-- !SECTION: navbar and hero -->
         <div class="wrapper -z-1">
             <nav class="relative py-5 bg-white">
                 <div class="relative flex items-center justify-between w-full">
@@ -230,7 +230,7 @@
             </header>
         </div>
 
-        <!-- what's your fitness dream -->
+        <!-- !SECTION: what's your fitness dream -->
         <section class="wrapper">
             <!-- heading and arrows -->
             <div class="flex items-center justify-between">
@@ -428,9 +428,9 @@
             </div>
         </section>
 
-        <!-- experienced personal trainer -->
+        <!-- !SECTION: experienced personal trainer -->
         <section
-            class="md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-7 md:gap-y-20 wrapper"
+            class="md:grid md:grid-cols-2 md:gap-x-7 md:gap-y-20 wrapper lg:gap-20"
         >
             <!-- 14+ years of experience cont -->
             <div class="border-drk-green relative rounded-3xl">
@@ -529,20 +529,21 @@
                     </span>
                 </div>
 
-                <!-- text container -->
+                <!-- dark green container -->
                 <div
-                    class="bg-drk-green h-[50%] py-11 px-6 flex flex-col gap-5 rounded-bl-[inherit] rounded-br-[inherit] text-white md:rounded-bl-none md:rounded-tr-[inherit] md:h-full"
+                    class="bg-drk-green h-[50%] py-11 px-6 flex flex-col gap-5 rounded-bl-[inherit] rounded-br-[inherit] text-white md:rounded-bl-none md:rounded-tr-[inherit] md:h-full md:justify-center"
                 >
-                    <h2
-                        class="text-[clamp(1.375rem,1.667vw+1.042rem,2.375rem)] text-white"
-                    >
-                        Helping you achieve your fitness potential is my
-                        mission.
-                    </h2>
-
                     <!-- mike vasquez quote -->
-                    <div>
-                        <div class="flex items-center gap-3">
+                    <blockquote>
+                        <h2
+                            class="text-[clamp(1.375rem,1.667vw+1.042rem,2.375rem)] text-white"
+                        >
+                            Helping you achieve your fitness potential is my
+                            mission.
+                        </h2>
+
+                        <!-- Mike Vasquez quote -->
+                        <p class="mt-3 flex items-center gap-3">
                             <svg
                                 class="size-10"
                                 version="1.1"
@@ -573,9 +574,9 @@
                                     </g>
                                 </g>
                             </svg>
-                            <span class="text-base">Mike Vasquez</span>
-                        </div>
-                    </div>
+                            <span>Mike Vasquez</span>
+                        </p>
+                    </blockquote>
 
                     <!-- socials -->
                     <div>
@@ -609,12 +610,96 @@
                             </a>
                         </div>
                     </div>
-
-                    <!-- todo: add strength text -->
                 </div>
             </article>
         </section>
 
-        <section class="mt-20">hi</section>
+        <!-- !SECTION: what my clients say section -->
+        <section class="wrapper flex flex-col gap-10 relative">
+            <!-- heading and testimonial text -->
+            <h2>What my clients say</h2>
+
+            <!-- testimonial text and images  -->
+            <div
+                class="flex flex-col gap-7 md:flex-row md:justify-between md:gap-8 lg:w-[45%]"
+            >
+                <!-- testimonial text -->
+                <div class="">
+                    <blockquote>
+                        <div>
+                            <!-- stars -->
+                            <img
+                                src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6757bc1a3bf331c84b4e6ac0_star.svg"
+                                alt="Image of 5 stars"
+                            />
+
+                            <p class="text-drk-green mt-2 font-semibold">
+                                I achieved my fitness goals
+                            </p>
+                        </div>
+
+                        <div>
+                            <p class="mt-2 text-base">
+                                Sarah's training has completely transformed my
+                                approach to fitness. I've lost 20 pounds and
+                                gained a new sense of vitality and
+                                self-assurance. His customized plans and ongoing
+                                support were instrumental in my success. I
+                                highly recommend him to anyone eager to change
+                                their fitness lifestyle.
+                            </p>
+
+                            <p class="text-gray-700 mt-5 text-base">
+                                - Sarah L.
+                            </p>
+                        </div>
+                    </blockquote>
+                </div>
+
+                <!-- grid of images -->
+                <div
+                    class="grid grid-cols-[repeat(auto-fit,72px)] w-[90%] gap-4 [&>img]:rounded-full [&>img:not(:first-child)]:grayscale min-[480px]:grid-cols-[repeat(auto-fit,100px)] min-[768px]:grid-cols-[repeat(2,72px)] md:justify-center min-[785px]:justify-center min-[785px]:grid-cols-[repeat(3,72px)] lg:hidden"
+                >
+                    <img
+                        class="outline-3 outline-lime-green"
+                        src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756ceca22fac945c26ee609_testimonial-image-01.avif"
+                        alt="image of lady posing in the gym"
+                    />
+
+                    <img
+                        src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756cec859cec0a3540668d4_testimonial-image-02.avif"
+                        alt="image of a man posing for the camera with his arms folded"
+                    />
+
+                    <img
+                        src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756cec9b524569126fb5166_testimonial-image-03.avif"
+                        alt="image of a muscular man holding 2 dumbbells"
+                    />
+
+                    <img
+                        src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756ceca590e3ad2bb07761e_testimonial-image-06.avif"
+                        alt="image of a lady with a black duffel bag posing for the camera"
+                    />
+
+                    <img
+                        src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756ceca64e4e14cb0fca97d_testimonial-image-05.avif"
+                        alt="image of a guy lifting a dumbbell in the gym"
+                    />
+
+                    <img
+                        src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756cec8b6682e3b2dc7e810_testimonial-image-04.avif"
+                        alt="image of a lady in the gym holding 2 red dumbbells"
+                    />
+                </div>
+
+                <div
+                    class="hidden absolute size-[450px] top-0 right-0 lg:block"
+                >
+                    <img src="../images/testimonials-img.png" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <div class="margin-top">Hi</div>
     </body>
 </html>
