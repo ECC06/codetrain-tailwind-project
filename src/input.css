@@ -57,6 +57,7 @@
 	body {
 		font-size: 18px;
 		font-family: "DM Sans Variable", sans-serif;
+        letter-spacing: 0;
 	}
 
     .margin-top {
@@ -80,6 +81,12 @@
 	h3 {
 		@apply text-h3;
 	}
+
+    h4.question {
+        @apply text-base font-bold tracking-tight min-[480px]:text-lg;
+    }
+
+
 }
 
 @layer utilities {
@@ -122,7 +129,7 @@
 	}
 
 	.link-with-arrow-icon > span.lime-btn {
-		@apply flex items-center px-6 py-4 rounded-full text-base bg-lime-green;
+		@apply flex items-center px-6 py-4 text-base rounded-full bg-lime-green;
 	}
 
 	.link-with-arrow-icon > span.btn-with-arrow {
@@ -141,4 +148,18 @@
 	.certifications-list > li {
 		@apply before:size-5 flex gap-2 items-center before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67568843be9cf509138f3cb2_about-split-icon.svg')];
 	}
+
+    /* styles for FAQ section */
+
+    .faq-check > svg.faq-plus-icon {
+        @apply peer-checked:rotate-45 transition-[rotate] duration-500 size-7;
+    }
+
+    p.answer {
+        @apply w-[inherit] pt-4 text-gray-1;
+    }
+
+    div.question-and-answer {
+        @apply p-5 rounded-2xl bg-gray-3;
+    }
 }
