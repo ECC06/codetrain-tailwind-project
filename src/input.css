@@ -136,7 +136,7 @@
 		@apply rounded-[50%] size-12 flex;
 	}
 
-	/* style for the arrow icon  */
+	/* style for the arrow icon found in green button links  */
 	span.btn-with-arrow > svg {
 		@apply transition ease-out -rotate-45 duration-750;
 	}
@@ -148,6 +148,45 @@
 	.certifications-list > li {
 		@apply before:size-5 flex gap-2 items-center before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67568843be9cf509138f3cb2_about-split-icon.svg')];
 	}
+
+    /* base styles for shaded portion */
+    
+    .package-shaded-portion {
+        @apply rounded-[30px] p-5 grid gap-y-4 lg:p-12;
+    }
+
+    .package-shaded-portion h4 {
+        @apply font-extrabold;
+    }
+
+    .package-shaded-portion .rate {
+        @apply text-2xl font-semibold font-[GeneralSans] flex items-center gap-1;
+    }
+
+    .rate > span {
+        @apply text-4xl font-[650];
+    }
+
+    .package-cta {
+        @apply py-3 text-center transition duration-500 border rounded-full;
+    }
+
+    .packages-ul {
+        @apply grid gap-2 mt-3;
+    }
+
+    .packages-ul h5 {
+        @apply text-gray-500;
+    }
+
+    .packages-ul li {
+        @apply flex gap-2 before:relative before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6757d5be29a031098cf7868d_pricing-arrow.svg')];
+    }
+
+    /* styles for the packages section */
+    .package-icon-bg {
+        @apply size-17.5 bg-white rounded-full grid place-items-center;
+    }
 
     /* styles for FAQ section */
 
