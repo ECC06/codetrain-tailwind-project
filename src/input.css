@@ -162,4 +162,26 @@
     div.question-and-answer {
         @apply p-5 rounded-2xl bg-gray-3;
     }
+
+    /* footer styles */
+
+    .footer-links {
+        @apply grid mt-5 gap-y-4;
+    }
+
+    .footer-subheading {
+        @apply text-2xl font-semibold;
+    }
+
+    .footer-link {
+        @apply text-xl font-light hover:text-lime-green md:text-lg lg:text-xl;
+    }
+
+    .footer-input {
+        @apply w-full py-2 text-base border-b-[0.5px] border-gray-1;
+    }
+
+    .footer-input::placeholder {
+        @apply font-light text-white;
+    }
 }

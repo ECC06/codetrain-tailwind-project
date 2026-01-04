@@ -17,7 +17,7 @@
     </head>
 
     <body class="relative flex flex-col items-center gap-20 -z-1000">
-        <!-- !SECTION: navbar and hero -->
+        <!-- !navbar and hero -->
         <div class="wrapper -z-1">
             <nav class="relative py-5 bg-white">
                 <div class="relative flex items-center justify-between w-full">
@@ -506,7 +506,7 @@
             >
                 <!-- video -->
                 <div
-                    class="relative h-[50%] rounded-tl-[inherit] rounded-tr-[inherit] md:rounded-tr-none md:rounded-bl-[inherit] md:h-full"
+                    class="relative h-75 rounded-tl-[inherit] rounded-tr-[inherit] md:rounded-tr-none md:rounded-bl-[inherit] md:h-full"
                 >
                     <video
                         class="rounded-tl-[inherit] rounded-tr-[inherit] md:rounded-tr-none w-full h-full md:rounded-bl-[inherit] object-cover"
@@ -704,222 +704,405 @@
         </section>
 
         <!-- !SECTION: FAQ -->
-        <section class="grid gap-10 wrapper place-content-center">
-            <h2 class="text-center">Frequently Asked Questions</h2>
+        <section class="grid gap-10 justify-items-center wrapper">
+            <div class="lg:w-[90%]">
+                <h2 class="text-center">Frequently Asked Questions</h2>
 
-            <!-- questions container -->
-            <div class="grid w-full gap-y-5">
-                <!-- question and answer 1 -->
-                <div class="question-and-answer">
-                    <!-- question cont -->
-                    <div class="relative flex justify-between peer">
-                        <h4 class="question">
-                            How do I choose the right plan for me?
-                        </h4>
+                <!-- questions container -->
+                <div class="grid w-full mt-10 gap-y-5">
+                    <!-- question and answer 1 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                How do I choose the right plan for me?
+                            </h4>
 
-                        <label for="faq-check-1" class="faq-check">
-                            <input
-                                type="checkbox"
-                                id="faq-check-1"
-                                class="hidden peer"
-                            />
-                            <svg
-                                class="faq-plus-icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 -960 960 960"
-                                fill="#000000"
-                            >
-                                <path
-                                    d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                            <label for="faq-check-1" class="faq-check">
+                                <input
+                                    type="checkbox"
+                                    id="faq-check-1"
+                                    class="hidden peer"
                                 />
-                            </svg>
-                        </label>
-                    </div>
+                                <svg
+                                    class="faq-plus-icon"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 -960 960 960"
+                                    fill="#000000"
+                                >
+                                    <path
+                                        d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                                    />
+                                </svg>
+                            </label>
+                        </div>
 
-                    <!-- answer cont -->
-                    <div
-                        class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
-                    >
-                        <div class="overflow-hidden">
-                            <p class="answer">
-                                We recommend starting with a consultation to
-                                discuss your fitness goals and preferences. This
-                                way, we can tailor a plan that suits your
-                                individual needs.
-                            </p>
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
+                        >
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    We recommend starting with a consultation to
+                                    discuss your fitness goals and preferences.
+                                    This way, we can tailor a plan that suits
+                                    your individual needs.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- question and answer 2 -->
-                <div class="question-and-answer">
-                    <!-- question cont -->
-                    <div class="relative flex justify-between peer">
-                        <h4 class="question">
-                            What if I miss a scheduled training session?
-                        </h4>
+                    <!-- question and answer 2 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                What if I miss a scheduled training session?
+                            </h4>
 
-                        <label for="faq-check-2" class="faq-check">
-                            <input
-                                type="checkbox"
-                                id="faq-check-2"
-                                class="hidden peer"
-                            />
-                            <svg
-                                class="faq-plus-icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 -960 960 960"
-                                fill="#000000"
-                            >
-                                <path
-                                    d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                            <label for="faq-check-2" class="faq-check">
+                                <input
+                                    type="checkbox"
+                                    id="faq-check-2"
+                                    class="hidden peer"
                                 />
-                            </svg>
-                        </label>
-                    </div>
+                                <svg
+                                    class="faq-plus-icon"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 -960 960 960"
+                                    fill="#000000"
+                                >
+                                    <path
+                                        d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                                    />
+                                </svg>
+                            </label>
+                        </div>
 
-                    <!-- answer cont -->
-                    <div
-                        class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
-                    >
-                        <div class="overflow-hidden">
-                            <p class="answer">
-                                If you miss a scheduled training session, please
-                                contact your trainer as soon as possible to
-                                discuss rescheduling options. We understand that
-                                life can be unpredictable, and we are here to
-                                help you stay on track with your fitness goals.
-                            </p>
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
+                        >
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    If you miss a scheduled training session,
+                                    please contact your trainer as soon as
+                                    possible to discuss rescheduling options. We
+                                    understand that life can be unpredictable,
+                                    and we are here to help you stay on track
+                                    with your fitness goals.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- question and answer 3 -->
-                <div class="question-and-answer">
-                    <!-- question cont -->
-                    <div class="relative flex justify-between peer">
-                        <h4 class="question">Can I switch my plan later?</h4>
+                    <!-- question and answer 3 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                Can I switch my plan later?
+                            </h4>
 
-                        <label for="faq-check-3" class="faq-check">
-                            <input
-                                type="checkbox"
-                                id="faq-check-3"
-                                class="hidden peer"
-                            />
-                            <svg
-                                class="faq-plus-icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 -960 960 960"
-                                fill="#000000"
-                            >
-                                <path
-                                    d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                            <label for="faq-check-3" class="faq-check">
+                                <input
+                                    type="checkbox"
+                                    id="faq-check-3"
+                                    class="hidden peer"
                                 />
-                            </svg>
-                        </label>
-                    </div>
+                                <svg
+                                    class="faq-plus-icon"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 -960 960 960"
+                                    fill="#000000"
+                                >
+                                    <path
+                                        d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                                    />
+                                </svg>
+                            </label>
+                        </div>
 
-                    <!-- answer cont -->
-                    <div
-                        class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
-                    >
-                        <div class="overflow-hidden">
-                            <p class="answer">
-                                Yes, you can switch your plan at any time. We
-                                understand that your needs may change, and we
-                                are flexible in accommodating those changes to
-                                ensure you have the best experience.
-                            </p>
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
+                        >
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    Yes, you can switch your plan at any time.
+                                    We understand that your needs may change,
+                                    and we are flexible in accommodating those
+                                    changes to ensure you have the best
+                                    experience.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- question and answer 4 -->
-                <div class="question-and-answer">
-                    <!-- question cont -->
-                    <div class="relative flex justify-between peer">
-                        <h4 class="question">
-                            How do I contact my trainer for support?
-                        </h4>
+                    <!-- question and answer 4 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                How do I contact my trainer for support?
+                            </h4>
 
-                        <label for="faq-check-4" class="faq-check">
-                            <input
-                                type="checkbox"
-                                id="faq-check-4"
-                                class="hidden peer"
-                            />
-                            <svg
-                                class="faq-plus-icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 -960 960 960"
-                                fill="#000000"
-                            >
-                                <path
-                                    d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                            <label for="faq-check-4" class="faq-check">
+                                <input
+                                    type="checkbox"
+                                    id="faq-check-4"
+                                    class="hidden peer"
                                 />
-                            </svg>
-                        </label>
-                    </div>
+                                <svg
+                                    class="faq-plus-icon"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 -960 960 960"
+                                    fill="#000000"
+                                >
+                                    <path
+                                        d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                                    />
+                                </svg>
+                            </label>
+                        </div>
 
-                    <!-- answer cont -->
-                    <div
-                        class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
-                    >
-                        <div class="overflow-hidden">
-                            <p class="answer">
-                                You can contact your trainer for support by
-                                sending them an email or a message through the
-                                training app. They are available to assist you
-                                with any questions or concerns you may have.
-                            </p>
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
+                        >
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    You can contact your trainer for support by
+                                    sending them an email or a message through
+                                    the training app. They are available to
+                                    assist you with any questions or concerns
+                                    you may have.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- question and answer 5 -->
-                <div class="question-and-answer">
-                    <!-- question cont -->
-                    <div class="relative flex justify-between peer">
-                        <h4 class="question">
-                            Are there any long term commitments?
-                        </h4>
+                    <!-- question and answer 5 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                Are there any long term commitments?
+                            </h4>
 
-                        <label for="faq-check-5" class="faq-check">
-                            <input
-                                type="checkbox"
-                                id="faq-check-5"
-                                class="hidden peer"
-                            />
-                            <svg
-                                class="faq-plus-icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 -960 960 960"
-                                fill="#000000"
-                            >
-                                <path
-                                    d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                            <label for="faq-check-5" class="faq-check">
+                                <input
+                                    type="checkbox"
+                                    id="faq-check-5"
+                                    class="hidden peer"
                                 />
-                            </svg>
-                        </label>
-                    </div>
+                                <svg
+                                    class="faq-plus-icon"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 -960 960 960"
+                                    fill="#000000"
+                                >
+                                    <path
+                                        d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                                    />
+                                </svg>
+                            </label>
+                        </div>
 
-                    <!-- answer cont -->
-                    <div
-                        class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
-                    >
-                        <div class="overflow-hidden">
-                            <p class="answer">
-                                No, there are no long-term commitments required.
-                                You have the flexibility to choose a plan that
-                                fits your current needs and can adjust or cancel
-                                at any time.
-                            </p>
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500"
+                        >
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    No, there are no long-term commitments
+                                    required. You have the flexibility to choose
+                                    a plan that fits your current needs and can
+                                    adjust or cancel at any time.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="margin-top">Hi</div>
+        <!-- !Section: Footer -->
+        <footer class="w-full pb-5 text-white pt-15 bg-drk-green">
+            <!-- wrapper -->
+            <div
+                class="grid gap-10 mx-auto wrapper md:grid-cols-2 md:gap-8 xl:grid-cols-3 xl:gap-10"
+            >
+                <!-- logo and contact -->
+                <div class="grid gap-y-8">
+                    <a href="./index.html">
+                        <img
+                            src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67591855de7e3fb37df0122b_gymtrainer-light.svg"
+                            alt="logo"
+                            class="w-42.5 h-12.5"
+                        />
+                    </a>
+
+                    <address class="grid gap-5 not-italic">
+                        <!-- feel free to call me cont -->
+                        <div class="flex gap-3">
+                            <!-- phone logo -->
+                            <img
+                                src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67580e862f4a146ac9e43a70_footer-icon-01.svg"
+                                loading="eager"
+                                alt="telephone icon"
+                                class="h-fit"
+                            />
+
+                            <!-- contacts -->
+                            <div class="grid gap-y-2">
+                                <p>Feel free to call me</p>
+                                <strong>+(91) 125 879 786</strong>
+                                <strong>+(84) 578 666 333</strong>
+                            </div>
+                        </div>
+
+                        <!-- email me cont -->
+                        <div class="flex gap-3">
+                            <img
+                                src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67580e86d3bbcf24cadb4bbc_footer-icon-02.svg"
+                                loading="eager"
+                                alt="email icon"
+                                class="h-fit"
+                            />
+
+                            <div class="grid gap-y-2">
+                                <p>Email me on</p>
+                                <strong>example@gmail.com</strong>
+                            </div>
+                        </div>
+                    </address>
+
+                    <p>
+                        Designed by
+                        <a
+                            href="https://webestica.com/"
+                            class="text-lime-green hover:text-white"
+                            >Webstica</a
+                        >, Powered by
+                        <a
+                            href="https://webflow.com/"
+                            class="text-lime-green hover:text-white"
+                            >Webflow</a
+                        >
+                    </p>
+                </div>
+
+                <!-- page links cont -->
+                <div class="flex flex-col gap-10 md:flex-row md:gap-20">
+                    <!-- pages links -->
+                    <div>
+                        <h5 class="footer-subheading">Pages link</h5>
+
+                        <div class="footer-links">
+                            <a href="" class="footer-link" target="_blank"
+                                >Home</a
+                            >
+                            <a href="" class="footer-link" target="_blank"
+                                >About</a
+                            >
+                            <a href="" class="footer-link" target="_blank"
+                                >Classes</a
+                            >
+                            <a href="" class="footer-link" target="_blank"
+                                >Packages</a
+                            >
+                            <a href="" class="footer-link" target="_blank"
+                                >Blog</a
+                            >
+                            <a href="" class="footer-link" target="_blank"
+                                >Contact</a
+                            >
+                            <a href="" class="footer-link" target="_blank"
+                                >Privacy Policy</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- utility pages -->
+                    <div>
+                        <h5 class="footer-subheading">Utility pages</h5>
+
+                        <div class="footer-links">
+                            <a
+                                href="http://"
+                                class="footer-link"
+                                target="_blank"
+                                >Style Guide</a
+                            >
+                            <a class="footer-link" target="_blank"
+                                >Instructions</a
+                            >
+                            <a class="footer-link" target="_blank">Licenses</a>
+                            <a class="footer-link" target="_blank">Changelog</a>
+                            <a class="footer-link" target="_blank"
+                                >Link in Bio</a
+                            >
+                            <a class="footer-link" target="_blank">Error 404</a>
+                            <a class="footer-link" target="_blank"
+                                >Password Protected</a
+                            >
+                            <a class="footer-link" target="_blank"
+                                >Coming Soon</a
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="[&_label]:hidden">
+                    <h5 class="footer-subheading">Send me a message</h5>
+
+                    <div class="grid mt-4 gap-y-6">
+                        <div class="mt-3">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Name"
+                                class="footer-input"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Email"
+                                class="footer-input"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Message"
+                                rows="4"
+                                required
+                                class="footer-input"
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="px-4 py-2.5 mt-1 text-base text-black rounded-lg bg-lime-green"
+                    >
+                        Send message
+                    </button>
+                </form>
+            </div>
+        </footer>
     </body>
 </html>
