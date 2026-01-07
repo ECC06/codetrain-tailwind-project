@@ -2,157 +2,168 @@
 
 /* dm-sans-latin-wght-normal */
 @font-face {
-	font-family: "DM Sans Variable";
-	font-style: normal;
-	font-display: swap;
-	font-weight: 100 1000;
-	src: url(https://cdn.jsdelivr.net/fontsource/fonts/dm-sans:vf@latest/latin-wght-normal.woff2)
-		format("woff2-variations");
-	unicode-range:
-		U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-family: "DM Sans Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 1000;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/dm-sans:vf@latest/latin-wght-normal.woff2)
+        format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* general sans */
 @font-face {
-	font-family: "GeneralSans"; /* Name your font family */
-	src: url("../GeneralSans_Complete/Fonts/TTF/GeneralSans-Variable.ttf");
-	font-style: normal;
-	font-display: swap; /* Improves performance by displaying fallback text while loading */
-}
-
-.material-symbols-outlined {
-	font-variation-settings:
-		"FILL" 0,
-		"wght" 400,
-		"GRAD" 0,
-		"opsz" 24;
+    font-family: "GeneralSans"; /* Name your font family */
+    src: url("../GeneralSans_Complete/Fonts/TTF/GeneralSans-Variable.ttf");
+    font-style: normal;
+    font-display: swap; /* Improves performance by displaying fallback text while loading */
 }
 
 @theme {
-	--color-drk-green: #083434;
-	--color-lime-green: #b8fe22;
-	--color-black: #1e2222;
-	--color-gray-1: #4e5151;
-	--color-gray-2: #d7dddd;
-	--color-gray-3: #f5f5f5;
-	--color-gray-4: #eef1e8;
-	--color-transparent: red;
+    --color-drk-green: #083434;
+    --color-lime-green: #b8fe22;
+    --color-black: #1e2222;
+    --color-gray-1: #4e5151;
+    --color-gray-2: #d7dddd;
+    --color-gray-3: #f5f5f5;
+    --color-gray-4: #eef1e8;
+    --color-transparent: red;
 
-	--breakpoint-xs: 30rem; /* 480px */
-	--breakpoint-new-lg: 62rem; /* 992px */
+    --breakpoint-xs: 30rem; /* 480px */
+    --breakpoint-new-lg: 62rem; /* 992px */
 
-	--text-h1: clamp(2.625rem, 8.909vw + 0.843rem, 5.125rem);
-	--text-h2: clamp(2.25rem, 1.705vw + 1.909rem, 3rem);
-	--text-h3: clamp(1.5rem, 0.893vw + 1.321rem, 1.75rem);
+    /*default:42px min-479:50 min-768:70px min-1280: 82px */
+    --text-h2: clamp(2.25rem, 1.705vw + 1.909rem, 3rem);
+    --text-h3: clamp(1.5rem, 0.893vw + 1.321rem, 1.75rem);
 
     --testimonial-image-size: 70px;
 }
 
-@layer base {
-	html,
-	body {
-		height: 100%;
-	}
+/* .nav-and-header {
+    z-index: 0;
+} */
 
-	body {
-		font-size: 18px;
-		font-family: "DM Sans Variable", sans-serif;
-        letter-spacing: 0;
-	}
-
-    .margin-top {
-        margin-top: 500px;
-    }
+nav {
+    /* z-index: -3; */
 }
 
-@layer components {
-	:is(h1, h2, h3) {
-		@apply font-[GeneralSans] font-semibold leading-tight;
-	}
+.nav-and-header header {
+    /* z-index: -5; */
+}
 
-	h1 {
-		@apply text-h1;
-	}
+/* selects links container */
+ul:has(.nav-li-elem) {
+    /* z-index: -4; */
+}
 
-	h2 {
-		@apply text-h2;
-	}
+@layer base {
+    html,
+    body {
+        height: 100%;
+    }
 
-	h3 {
-		@apply text-h3;
-	}
+    body {
+        @apply text-lg font-[DM_Sans_Variable,sans-serif] tracking-normal grid justify-items-center gap-y-16 md:gap-y-24;
+    }
+
+    main {
+        @apply relative grid gap-y-16 md:gap-y-24;
+    }
+
+    :is(h1, h2, h3) {
+        @apply font-[GeneralSans] font-semibold leading-tight;
+    }
+
+    h2 {
+        @apply text-h2;
+    }
+
+    h3 {
+        @apply text-h3;
+    }
 
     h4.question {
         @apply text-base font-bold tracking-tight min-[480px]:text-lg;
     }
-
-
 }
 
-@layer utilities {
-	.wrapper {
-		width: clamp(290px, 90%, 1360px);
-	}
+@layer components {
+    /* !styles for white link button with a dark green arrow */
 
-	.flex-center {
-		@apply flex items-center justify-center;
-	}
+    a.transparent-link-with-arrow {
+        @apply flex items-start h-full font-medium w-fit;
+    }
 
-	.nav-li-elem {
-		@apply px-3 py-1 text-lg font-medium text-drk-green lg:text-xl;
-	}
+    span.transparent-link-text {
+        @apply flex items-center px-6 py-3 text-base border rounded-full;
+    }
 
-	.nav-anchor-elem,
-	.pages-dropdown-anchor-elem {
-		/* When the user hovers over the anchor element, create an after pseudo-element and give it a position absolute. 
+    .transparent-link-with-arrow span.drk-green-circle-with-arrow {
+        @apply rounded-[50%] bg-drk-green size-12.5 flex;
+    }
+
+    /* !style for the arrow icon found in ALL green button links  */
+    .arrow-icon {
+        @apply transition ease-out -rotate-45 duration-750 size-8;
+    }
+
+    /* !pages dropdown icon */
+    .pages-dropdown-icon {
+        @apply ml-0.5 mt-0.5 fill-drk-green;
+    }
+
+    /* !styles for li elements containing anchor tags in the nav bar */
+    .nav-li-elem {
+        @apply px-3 py-1 text-lg font-medium text-drk-green lg:text-xl;
+    }
+
+    /*!styles for anchor tags in the navbar  */
+    .nav-anchor-elem,
+    .pages-dropdown-anchor-elem {
+        /* When the user hovers over the anchor element, create an after pseudo-element and give it a position absolute. 
         
         Only do this when the vw is >=640px */
-		@apply relative transition ease-in duration-250 md:hover:after:absolute;
-	}
+        @apply relative transition ease-in duration-250 md:hover:after:absolute;
+    }
 
-	.nav-anchor-elem::after,
-	.pages-dropdown-anchor-elem::after {
-		@apply left-0 w-full h-1 -bottom-2 bg-lime-green;
-	}
+    .nav-anchor-elem::after,
+    .pages-dropdown-anchor-elem::after {
+        @apply left-0 w-full h-1 -bottom-2 bg-lime-green;
+    }
 
-	/* styles for the unordered list in the navbar.
+    /* !styles for the unordered list in the navbar.
     they are applied when vw >= 1024px */
+    .links-desktop-styles {
+        @apply static inset-0 z-auto flex gap-2 translate-y-0 border-0;
+    }
 
-	/* figure out how to apply this */
-	.links-desktop-styles {
-		@apply static inset-0 z-auto flex gap-2 translate-y-0 border-0;
-	}
+    /* !styles for the lime green link with an arrow icon */
+    .lime-green-link {
+        @apply flex h-12 text-xl font-medium;
+    }
 
-	/* styles for the lime green link */
-	.link-with-arrow-icon {
-		@apply flex h-12 text-xl font-medium;
-	}
+    .lime-green-link > span.lime-btn {
+        @apply flex items-center px-6 py-4 text-base rounded-full bg-lime-green;
+    }
 
-	.link-with-arrow-icon > span.lime-btn {
-		@apply flex items-center px-6 py-4 text-base rounded-full bg-lime-green;
-	}
+    .lime-green-link > span.lime-green-link-circle {
+        @apply rounded-[50%] size-12 flex;
+    }
 
-	.link-with-arrow-icon > span.btn-with-arrow {
-		@apply rounded-[50%] size-12 flex;
-	}
+    /* !styles for list of certifications found on the home-page */
+    .certifications-list {
+        @apply flex flex-col gap-3;
+    }
 
-	/* style for the arrow icon found in green button links  */
-	span.btn-with-arrow > svg {
-		@apply transition ease-out -rotate-45 duration-750;
-	}
-
-	.certifications-list {
-		@apply flex flex-col gap-3;
-	}
-
-	.certifications-list > li {
-		@apply before:size-5 flex gap-2 items-center before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67568843be9cf509138f3cb2_about-split-icon.svg')];
-	}
+    .certifications-list > li {
+        @apply before:size-5 flex gap-2 items-center before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67568843be9cf509138f3cb2_about-split-icon.svg')];
+    }
 
     /* base styles for shaded portion */
-    
     .package-shaded-portion {
-        @apply rounded-[30px] p-5 grid gap-y-4 lg:p-12;
+        @apply rounded-[30px] p-5 grid gap-y-4 lg:p-12 lg:gap-y-6;
     }
 
     .package-shaded-portion h4 {
@@ -168,11 +179,11 @@
     }
 
     .package-cta {
-        @apply py-3 text-center transition duration-500 border rounded-full;
+        @apply py-3 text-center transition duration-500 border rounded-full lg:mt-3;
     }
 
     .packages-ul {
-        @apply grid gap-2 mt-3;
+        @apply grid gap-2 mt-8;
     }
 
     .packages-ul h5 {
@@ -222,5 +233,15 @@
 
     .footer-input::placeholder {
         @apply font-light text-white;
+    }
+}
+
+@layer utilities {
+    .wrapper {
+        width: clamp(290px, 90%, 1360px);
+    }
+
+    .flex-center {
+        @apply flex items-center justify-center;
     }
 }

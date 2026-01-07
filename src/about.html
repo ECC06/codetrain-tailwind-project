@@ -1,9 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body></body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="/public/output.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- !navbar and hero -->
+    <div class="mb-20 nav-and-header wrapper">
+        <nav class="relative w-full py-5 bg-white">
+            <div class="relative flex items-center justify-between w-full">
+                <!-- logo -->
+                <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6759133e8734562de6520966_Logo%203.svg"
+                    loading="lazy" alt="logo" class="logo w-[32.5] h-10 md:w-43.75 md:h-12.5" />
+
+                <!-- right buttons -->
+                <div class="flex items-center gap-7 lg:w-full lg:justify-between">
+                    <!-- get started link -->
+                    <a href="./contact.html" class="transparent-link-with-arrow group lg:order-2 max-md:hidden ">
+                        <span class="transparent-link-text">Get started</span>
+                        <span class="drk-green-circle-with-arrow flex-center">
+                            <svg class="arrow-icon group-hover:rotate-0" xmlns="http://www.w3.org/2000/svg" width="32"
+                                height="32" viewBox="0 0 24 24">
+                                <path fill="#ffffff"
+                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <!-- navbar button -->
+
+                    <label for="check"
+                        class="lg:hidden peer flex items-center justify-center bg-lime-green w-10 h-10 rounded-[50%] md:size-16 cursor-pointer has-checked:bg-drk-green">
+                        <input type="checkbox" id="check" class="hidden peer" />
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72"
+                            class="size-5 md:size-8 peer-checked:fill-white">
+                            <path
+                                d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z">
+                            </path>
+                        </svg>
+                    </label>
+
+                    <!--nav links  -->
+                    <ul
+                        class="border-[1.3px] absolute top-0 left-0 py-2 translate-y-[-120%] w-full rounded-lg bg-gray-4 peer-has-checked:translate-y-15 peer-has-checked:md:translate-y-21 transition-[translate] duration-500 ease-out lg:static lg:inset-0 lg:translate-y-0 lg:flex lg:gap-2 lg:order-1 lg:w-fit lg:py-0 lg:bg-transparent lg:rounded-none lg:border-none lg:mx-auto lg:transition-none">
+                        <li class="nav-li-elem">
+                            <a href="./index.html" class="nav-anchor-elem">Home</a>
+                        </li>
+
+                        <li class="nav-li-elem">
+                            <a href="./about.html" class="nav-anchor-elem">About</a>
+                        </li>
+
+                        <!-- pages dropdown -->
+                        <li class="cursor-pointer nav-li-elem">
+                            <details>
+                                <summary class="flex items-center justify-between list-none">
+                                    <span class="nav-anchor-elem">Pages</span>
+                                    <svg class="pages-dropdown-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                        viewBox="0 -960 960 960" width="24px">
+                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                    </svg>
+                                    </span>
+                                </summary>
+                                <ul
+                                    class="border rounded-md my-3 py-2 [&>li]:px-2 [&>li]:py-1 lg:absolute lg:top-10 lg:bg-gray-4 lg:w-50 lg:my-0 right-0">
+                                    <li>
+                                        <a href="#" class="pages-dropdown-anchor-elem">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="./about.html" class="pages-dropdown-anchor-elem">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="./classes.html" class="pages-dropdown-anchor-elem">Classes</a>
+                                    </li>
+                                    <li>
+                                        <a href="./packages.html" class="pages-dropdown-anchor-elem">Packages</a>
+                                    </li>
+                                    <li>
+                                        <a href="./blog.html" class="pages-dropdown-anchor-elem">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="./contact.html" class="pages-dropdown-anchor-elem">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="./privacy-policy.html" class="pages-dropdown-anchor-elem">Privacy
+                                            Policy</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li class="nav-li-elem">
+                            <a href="./classes.html" class="nav-anchor-elem">Classes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header
+            class="grid grid-cols-1 gap-y-5 mt-8 relative md:max-h-137.5 [&>img]:object-cover [&>:nth-last-child(-n+4)]:rounded-2xl xs:grid-cols-2 xs:grid-rows-3 xs:gap-x-6 md:grid-cols-3 md:grid-rows-[180px_60px_160px] md:gap-x-5 md:items-start md:[&>img]:object-top md:[&>img]:w-full lg:grid-rows-[230px_80px_300px] lg:grid-cols-[1fr_0.55fr_1fr] lg:gap-7">
+            <!-- heading and link -->
+            <div class="grid order-1 gap-y-6 xs:col-span-2 md:h-full md:gap-y-0 md:row-span-2 lg:gap-3">
+                <h1 class="text-[40px] xs:text-[50px] lg:text-[68px] md:self-end">
+                    <span class="text-drk-green">Mike Vasquez, </span>your
+                    fitness guide
+                </h1>
+
+                <!-- explore my service -->
+                <a href="./contact.html" class="transparent-link-with-arrow group h-fit md:self-center">
+                    <span class="border transparent-link-text">Explore my services</span>
+                    <span class="drk-green-circle-with-arrow flex-center">
+                        <svg class="arrow-icon group-hover:rotate-0" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24">
+                            <path fill="#ffffff"
+                                d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <!-- lime green years of exp cont -->
+            <div
+                class="order-2 grid place-items-center px-5 py-7 bg-lime-green font-[GeneralSans] font-semibold w-62.5 h-[90%] self-end xs:order-3 xs:w-full xs:h-40 xs:self-end xs:mt-0 xs:items-end md:order-5 md:py-4 md:w-[90%] md:h-full md:px-5 md:self-start lg:w-full lg:h-[70%] lg:max-w-[250px] lg:justify-self-end">
+                <div class="text-center -translate-y-1.5 md:translate-0 md:self-center">
+                    <p
+                        class="mb-3 text-lg xs:text-[clamp(1.063rem,2.439vw+0.331rem,1.5rem)] md:text-base lg:text-xl lg:mb-9">
+                        Years of Experience
+                    </p>
+                    <span class="text-7xl text-drk-green lg:text-18">14+</span>
+                </div>
+            </div>
+
+            <img class="order-3 xs:order-2 md:order-4 md:h-full"
+                src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6759263b4fb11de466c9cc6a_about-hero-04.avif"
+                alt="People doing bulgarian splits" />
+
+            <img class="order-4 h-full md:order-2"
+                src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6759263b9cefec9651e40e5e_about-hero-01.avif"
+                alt="4 people hanging out in the gym" />
+
+            <img class="order-5 md:order-3 md:row-span-2 md:h-full"
+                src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6759263b017ab267c75a8e8a_about-hero-02.avif"
+                alt="A man helping a lady on bench-press" />
+        </header>
+    </div>
+</body>
+
 </html>
