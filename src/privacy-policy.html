@@ -1,11 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>Privacy policy</h1>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy</title>
+    <link rel="stylesheet" href="/public/output.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="grid gap-y-15">
+    <!-- !navbar and hero -->
+    <div class="nav-and-header wrapper">
+        <nav class="relative w-full py-5 bg-white">
+            <div class="relative flex items-center justify-between w-full">
+                <!-- logo -->
+                <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6759133e8734562de6520966_Logo%203.svg"
+                    loading="lazy" alt="logo" class="logo w-[32.5] h-10 md:w-43.75 md:h-12.5" />
+
+                <!-- right buttons -->
+                <div class="flex items-center gap-7 lg:w-full lg:justify-between">
+                    <!-- get started link -->
+                    <a href="./contact.html" class="transparent-link-with-arrow group lg:order-2 max-md:hidden ">
+                        <span class="transparent-link-text">Get started</span>
+                        <span class="drk-green-circle-with-arrow flex-center">
+                            <svg class="arrow-icon group-hover:rotate-0" xmlns="http://www.w3.org/2000/svg" width="32"
+                                height="32" viewBox="0 0 24 24">
+                                <path fill="#ffffff"
+                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <!-- navbar button -->
+
+                    <label for="check"
+                        class="lg:hidden peer flex items-center justify-center bg-lime-green w-10 h-10 rounded-[50%] md:size-16 cursor-pointer has-checked:bg-drk-green">
+                        <input type="checkbox" id="check" class="hidden peer" />
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72"
+                            class="size-5 md:size-8 peer-checked:fill-white">
+                            <path
+                                d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z">
+                            </path>
+                        </svg>
+                    </label>
+
+                    <!--nav links  -->
+                    <ul
+                        class="border-[1.3px] absolute top-0 left-0 py-2 translate-y-[-120%] w-full rounded-lg bg-gray-4 peer-has-checked:translate-y-15 peer-has-checked:md:translate-y-21 transition-[translate] duration-500 ease-out lg:static lg:inset-0 lg:translate-y-0 lg:flex lg:gap-2 lg:order-1 lg:w-fit lg:py-0 lg:bg-transparent lg:rounded-none lg:border-none lg:mx-auto lg:transition-none">
+                        <li class="nav-li-elem">
+                            <a href="./index.html" class="nav-anchor-elem">Home</a>
+                        </li>
+
+                        <li class="nav-li-elem">
+                            <a href="./about.html" class="nav-anchor-elem">About</a>
+                        </li>
+
+                        <!-- pages dropdown -->
+                        <li class="cursor-pointer nav-li-elem">
+                            <details>
+                                <summary class="flex items-center justify-between list-none">
+                                    <span class="nav-anchor-elem">Pages</span>
+                                    <svg class="pages-dropdown-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                        viewBox="0 -960 960 960" width="24px">
+                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                    </svg>
+                                    </span>
+                                </summary>
+                                <ul
+                                    class="border rounded-md my-3 py-2 [&>li]:px-2 [&>li]:py-1 lg:absolute lg:top-10 lg:bg-gray-4 lg:w-50 lg:my-0 right-0">
+                                    <li>
+                                        <a href="#" class="pages-dropdown-anchor-elem">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="./about.html" class="pages-dropdown-anchor-elem">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="./classes.html" class="pages-dropdown-anchor-elem">Classes</a>
+                                    </li>
+                                    <li>
+                                        <a href="./packages.html" class="pages-dropdown-anchor-elem">Packages</a>
+                                    </li>
+                                    <li>
+                                        <a href="./blog.html" class="pages-dropdown-anchor-elem">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="./contact.html" class="pages-dropdown-anchor-elem">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="./privacy-policy.html" class="pages-dropdown-anchor-elem">Privacy
+                                            Policy</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li class="nav-li-elem">
+                            <a href="./classes.html" class="nav-anchor-elem">Classes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="grid place-items-center bg-drk-green py-15 px-7 rounded-[20px] md:p-15 xl:p-25">
+            <div class="grid text-center gap-y-2 lg:gap-y-4">
+                <h1 class="text-[2.5rem] md:text-[3.5rem] lg:text-6xl text-lime-green">Privacy policy</h1>
+                <h5 class="text-white lg:text-2xl">Last updated: Dec 10, 2024</h5>
+            </div>
+        </header>
+
+    </div>
+
+    <main class="wrapper">
+        <!-- collecting personal information -->
+        <section class="privacy-section">
+            <!-- heading and intro text -->
+            <div>
+                <h2>Collecting Personal Information</h2>
+                <p class="mt-3">
+                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+                    making
+                    this the first true
+                    generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+                    of
+                    model sentence
+                    structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
+                    therefore
+                    always free from
+                    repetition, injected humour, or non-characteristic words etc.
+                </p>
+            </div>
+
+            <ul class="list-disc policy-list">
+                <li>There are many variations of passages of Lorem Ipsum available.</li>
+                <li>Iusto odio dignissimos ducimus qui blanditiis.</li>
+                <li>Praesentium voluptatum deleniti atque.</li>
+                <li>Quas molestias excepturi sint occaecati.</li>
+            </ul>
+
+            <p>
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by <span class="italic">Cicero are also reproduced in
+                    their
+                    exact
+                    original
+                    form,</span> accompanied by
+                English versions from the 1914 translation by H. Rackham.
+            </p>
+        </section>
+
+        <!-- sharing personal information text -->
+        <section class="privacy-section">
+            <!-- heading and intro text -->
+            <div>
+                <h2>Sharing Personal Information</h2>
+                <p class="mt-3">
+                    All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+                    making
+                    this the first true
+                    generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+                    of
+                    model sentence
+                    structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
+                    therefore
+                    always free from
+                    repetition, injected humour, or non-characteristic words etc.
+                </p>
+            </div>
+
+            <p>
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+
+            <ol class="list-decimal">
+                <li>sometimes on purpose.</li>
+                <li>classical Latin literature from 45 BC.</li>
+                <li>The Extremes of Good and Evil.</li>
+                <li>This book is a treatise on the theory.</li>
+            </ol>
+
+            <p>
+                Combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+                The generated
+                Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- !footer -->
+    <footer class="w-full pb-5 text-white pt-15 bg-drk-green">
+        <!-- wrapper for content -->
+        <div class="grid gap-10 mx-auto wrapper md:grid-cols-2 md:gap-8 xl:grid-cols-3 xl:gap-10">
+            <!-- logo and contact -->
+            <div class="grid gap-y-8">
+                <a href="./index.html" class="w-fit">
+                    <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67591855de7e3fb37df0122b_gymtrainer-light.svg"
+                        alt="logo" class="w-42.5 h-12.5" />
+                </a>
+
+                <address class="grid gap-5 not-italic">
+                    <!-- feel free to call me cont -->
+                    <div class="flex gap-3">
+                        <!-- phone logo -->
+                        <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67580e862f4a146ac9e43a70_footer-icon-01.svg"
+                            loading="eager" alt="telephone icon" class="h-fit" />
+
+                        <!-- contacts -->
+                        <div class="grid gap-y-2">
+                            <p>Feel free to call me</p>
+                            <strong>+(91) 125 879 786</strong>
+                            <strong>+(84) 578 666 333</strong>
+                        </div>
+                    </div>
+
+                    <!-- email me cont -->
+                    <div class="flex gap-3">
+                        <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67580e86d3bbcf24cadb4bbc_footer-icon-02.svg"
+                            loading="eager" alt="email icon" class="h-fit" />
+
+                        <div class="grid gap-y-2">
+                            <p>Email me on</p>
+                            <strong>example@gmail.com</strong>
+                        </div>
+                    </div>
+                </address>
+
+                <p>
+                    Designed by
+                    <a href="https://webestica.com/" class="text-lime-green hover:text-white">Webstica</a>, Powered by
+                    <a href="https://webflow.com/" class="text-lime-green hover:text-white">Webflow</a>
+                </p>
+            </div>
+
+            <!-- page links cont -->
+            <div class="flex flex-col gap-10 md:flex-row md:gap-20">
+                <!-- pages links -->
+                <div>
+                    <h5 class="footer-subheading">Pages link</h5>
+
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" target="_blank">Home</a>
+                        <a href="./about.html" class="footer-link" target="_blank">About</a>
+                        <a href="./classes.html" class="footer-link" target="_blank">Classes</a>
+                        <a href="./packages.html" class="footer-link" target="_blank">Packages</a>
+                        <a href="./blog.html" class="footer-link" target="_blank">Blog</a>
+                        <a href="./contact.html" class="footer-link" target="_blank">Contact</a>
+                        <a href="./privacy-policy.html" class="footer-link" target="_blank">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!-- utility pages -->
+                <div>
+                    <h5 class="footer-subheading">Utility pages</h5>
+
+                    <div class="footer-links">
+                        <a href="http://" class="footer-link" target="_blank">Style Guide</a>
+                        <a class="footer-link" target="_blank">Instructions</a>
+                        <a class="footer-link" target="_blank">Licenses</a>
+                        <a class="footer-link" target="_blank">Changelog</a>
+                        <a class="footer-link" target="_blank">Link in Bio</a>
+                        <a class="footer-link" target="_blank">Error 404</a>
+                        <a class="footer-link" target="_blank">Password Protected</a>
+                        <a class="footer-link" target="_blank">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="[&_label]:hidden">
+                <h5 class="footer-subheading">Send me a message</h5>
+
+                <div class="grid mt-4 gap-y-6">
+                    <div class="mt-3">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" class="footer-input" required />
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" class="footer-input" required />
+                    </div>
+
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Message" rows="4" required
+                            class="footer-input"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="px-4 py-2.5 mt-1 text-base text-black rounded-lg bg-lime-green">
+                    Send message
+                </button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+
 </html>

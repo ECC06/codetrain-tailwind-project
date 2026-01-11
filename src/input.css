@@ -243,6 +243,21 @@ ul:has(.nav-li-elem) {
         @apply object-cover grid-cols-2 border;
     }
 
+    /* privacy policy components */
+
+    .privacy-section {
+        @apply grid gap-y-10 text-gray-1;
+    }
+
+    .privacy-section h2 {
+        @apply text-2xl text-black lg:text-3xl;
+    }
+
+    .privacy-section ul,
+    .privacy-section ol {
+        @apply grid gap-y-1.5 pl-4;
+    }
+
     /* footer styles */
 
     .footer-links {
