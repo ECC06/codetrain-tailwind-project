@@ -34,7 +34,6 @@
     --breakpoint-xs: 30rem; /* 480px */
     --breakpoint-new-lg: 62rem; /* 992px */
 
-    /*default:42px min-479:50 min-768:70px min-1280: 82px */
     --text-h2: clamp(2.25rem, 1.705vw + 1.909rem, 3rem);
     --text-h3: clamp(1.5rem, 0.893vw + 1.321rem, 1.75rem);
 
@@ -161,7 +160,23 @@ ul:has(.nav-li-elem) {
         @apply before:size-5 flex gap-2 items-center before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67568843be9cf509138f3cb2_about-split-icon.svg')];
     }
 
-    /* base styles for shaded portion */
+    .social-link {
+        @apply grid rounded-lg place-items-center;
+    }
+
+    .homepage-social-links a.social-link {
+        @apply p-1 bg-lime-green;
+    }
+
+    .about-page-social-links .social-link {
+        @apply bg-white size-10;
+    }
+
+    a.social-link img {
+        @apply size-5;
+    }
+
+    /* base styles for shaded portion of the packages */
     .package-shaded-portion {
         @apply rounded-[30px] p-5 grid gap-y-4 lg:p-12 lg:gap-y-6;
     }
@@ -211,6 +226,21 @@ ul:has(.nav-li-elem) {
 
     div.question-and-answer {
         @apply p-5 rounded-2xl bg-gray-3;
+    }
+
+    /* components in the statistics */
+
+    .statistic-cont .statistic-num {
+        @apply text-[3.25rem] md:text-[4rem] font-semibold text-drk-green font-[GeneralSans];
+    }
+
+    .statistic-num > span {
+        @apply text-lime-green;
+    }
+
+    /* certification img */
+    .cert-img {
+        @apply object-cover grid-cols-2 border;
     }
 
     /* footer styles */
