@@ -89,8 +89,16 @@ ul:has(.nav-li-elem) {
 }
 
 @layer components {
-    /* !styles for white link button with a dark green arrow */
+    /* styles for white and black circular icons with an arrow in the middle */
+    .arrow-with-circle {
+        @apply grid place-items-center rounded-[50%] size-12;
+    }
 
+    svg.arrow-icon {
+        @apply transition ease-out -rotate-45 duration-750 size-8;
+    }
+
+    /* !styles for white link button with a dark green arrow */
     a.transparent-link-with-arrow {
         @apply flex items-start h-full font-medium w-fit;
     }
@@ -101,11 +109,6 @@ ul:has(.nav-li-elem) {
 
     .transparent-link-with-arrow span.drk-green-circle-with-arrow {
         @apply rounded-[50%] bg-drk-green size-12.5 flex;
-    }
-
-    /* !style for the arrow icon found in ALL green button links  */
-    .arrow-icon {
-        @apply transition ease-out -rotate-45 duration-750 size-8;
     }
 
     /* !pages dropdown icon */
@@ -147,8 +150,47 @@ ul:has(.nav-li-elem) {
         @apply flex items-center px-6 py-4 text-base rounded-full bg-lime-green;
     }
 
-    .lime-green-link > span.lime-green-link-circle {
-        @apply rounded-[50%] size-12 flex;
+    /* !styles for service cards (found on homepage, contact us page)  */
+
+    .service-card {
+        @apply content-between rounded-2xl;
+    }
+
+    .service-card-text-cont {
+        @apply p-5 md:p-7.5 h-[50%] lg:h-[40%];
+    }
+
+    .service-card-text-cont h3 {
+        @apply lg:text-2xl xl:xl:text-3xl;
+    }
+
+    .service-card-text-cont p {
+        @apply mt-4 text-drk-green lg:text-xl;
+    }
+
+    /* div containing image and icon */
+    .service-card-bottom-cont {
+        /* w-[455px] h-[341px] */
+        @apply relative h-[50%] lg:lg:h-[60%] overflow-hidden rounded-2xl;
+    }
+
+    /* applies the same transition the image and icon in the card*/
+    img,
+    span.service-card-circle-with-arrow,
+    svg.card-arrow-icon {
+        @apply transition ease-in duration-750;
+    }
+
+    .service-card-img {
+        @apply object-cover size-full;
+    }
+
+    .service-card-circle-with-arrow {
+        @apply absolute bg-white bottom-5 right-5;
+    }
+
+    .service-card-bottom-cont svg.card-arrow-icon {
+        @apply -rotate-45;
     }
 
     /* !styles for list of certifications found on the home-page */
@@ -176,37 +218,65 @@ ul:has(.nav-li-elem) {
         @apply size-5;
     }
 
-    /* base styles for shaded portion of the packages */
-    .package-shaded-portion {
-        @apply rounded-[30px] p-5 grid gap-y-4 lg:p-12 lg:gap-y-6;
+    .packages-cont {
+        @apply grid justify-between w-full grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3;
     }
 
-    .package-shaded-portion h4 {
+    /* base styles for shaded portion of the packages */
+    /* package-cont-upper sets padding to 0 */
+    .package-shaded-portion,
+    .package-cont-upper {
+        @apply grid p-5 rounded-4xl gap-y-4 lg:p-12 lg:gap-y-6;
+    }
+
+    .package-heading {
         @apply font-extrabold;
     }
 
-    .package-shaded-portion .rate {
-        @apply text-2xl font-semibold font-[GeneralSans] flex items-center gap-1;
+    .rate {
+        @apply flex items-center text-2xl font-semibold font-[GeneralSans] gap-1;
     }
 
     .rate > span {
-        @apply text-4xl font-[650];
+        @apply text-[40px] font-[650];
+    }
+
+    hr.package-cont-hr {
+        @apply mt-8 text-gray-400;
+    }
+
+    /* found only on packages.html */
+    .package-cont {
+        @apply grid  rounded-4xl p-7.5 gap-y-20;
     }
 
     .package-cta {
-        @apply py-3 text-center transition duration-500 border rounded-full lg:mt-3;
+        @apply grid items-center py-3 text-center transition duration-500 border rounded-full lg:mt-3;
     }
 
     .packages-ul {
         @apply grid gap-2 mt-8;
     }
 
-    .packages-ul h5 {
-        @apply text-gray-500;
+    .packages-list-heading {
+        @apply text-gray-1;
     }
 
     .packages-ul li {
-        @apply flex gap-2 before:relative before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6757d5be29a031098cf7868d_pricing-arrow.svg')];
+        @apply flex gap-2 before:relative;
+    }
+
+    .packages-ul.dark-text > li {
+        @apply before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6757d5be29a031098cf7868d_pricing-arrow.svg')];
+    }
+
+    .packages-ul.white-text > li {
+        @apply before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67582898d3bbcf24caf3ff1b_pricing-arrow-light.svg')];
+    }
+
+    /* !styles for package benefits */
+    .package-benefit {
+        @apply grid gap-y-2;
     }
 
     /* styles for the packages section */
@@ -226,6 +296,10 @@ ul:has(.nav-li-elem) {
 
     div.question-and-answer {
         @apply p-5 rounded-2xl bg-gray-3;
+    }
+
+    .packages-benefits-header {
+        @apply text-2xl font-semibold font-[GeneralSans];
     }
 
     /* components in the statistics */
@@ -258,7 +332,63 @@ ul:has(.nav-li-elem) {
         @apply grid gap-y-1.5 pl-4;
     }
 
+    .header-with-green-h1 {
+        @apply grid place-items-center bg-drk-green py-15 px-7 rounded-[20px] md:p-15 xl:p-25;
+    }
+
+    .header-with-green-h1 h1 {
+        @apply text-[2.5rem] md:text-[3.5rem] lg:text-6xl text-lime-green;
+    }
+
+    .classes-grid {
+        @apply grid gap-7.5 md:grid-cols-2 lg:grid-cols-3;
+    }
+
+    .classes-grid .service-card-text-cont,
+    .classes-grid .service-card-bottom-cont {
+        @apply h-fit;
+    }
+
+    /* ! grid of blog links */
+
+    .blog-links-grid {
+        @apply grid gap-10 md:grid-cols-2;
+    }
+
+    .blog-link-text {
+        @apply grid mt-4 gap-y-1;
+    }
+
+    .blog-date {
+        @apply text-xl text-drk-green;
+    }
+
+    .blog-title {
+        @apply font-semibold font-[GeneralSans] text-2xl mt-1;
+    }
+
+    .blog-link img {
+        @apply rounded-4xl;
+    }
+
+    /* pagination control on blog page */
+    .pagination-control {
+        @apply flex justify-center w-[min(910px,100%)] mx-auto;
+    }
+
+    .text-and-btn {
+        @apply flex flex-col w-full gap-4 md:flex-row md:w-fit md:items-center md:gap-8;
+    }
+
+    .pagination-btn {
+        @apply flex items-center justify-center w-full gap-1 px-6 py-3 transition duration-300 ease-in-out rounded-full text-drk-green bg-lime-green md:w-100 hover:bg-black hover:text-lime-green;
+    }
+
     /* footer styles */
+
+    footer {
+        @apply w-full pb-10 text-white pt-25 bg-drk-green;
+    }
 
     .footer-links {
         @apply grid mt-5 gap-y-4;
