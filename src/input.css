@@ -202,6 +202,11 @@ ul:has(.nav-li-elem) {
         @apply before:size-5 flex gap-2 items-center before:content-[url('https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67568843be9cf509138f3cb2_about-split-icon.svg')];
     }
 
+    /* !social links code  */
+    .social-links {
+        @apply flex gap-4;
+    }
+
     .social-link {
         @apply grid rounded-lg place-items-center;
     }
@@ -210,7 +215,7 @@ ul:has(.nav-li-elem) {
         @apply p-1 bg-lime-green;
     }
 
-    .about-page-social-links .social-link {
+    .white-social-links .social-link {
         @apply bg-white size-10;
     }
 
@@ -230,7 +235,7 @@ ul:has(.nav-li-elem) {
     }
 
     .package-heading {
-        @apply font-extrabold;
+        @apply text-base font-extrabold;
     }
 
     .rate {
@@ -247,11 +252,11 @@ ul:has(.nav-li-elem) {
 
     /* found only on packages.html */
     .package-cont {
-        @apply grid  rounded-4xl p-7.5 gap-y-20;
+        @apply grid content-between rounded-4xl p-7.5 min-h-200;
     }
 
     .package-cta {
-        @apply grid items-center py-3 text-center transition duration-500 border rounded-full lg:mt-3;
+        @apply grid items-center text-center transition duration-500 border rounded-full h-13;
     }
 
     .packages-ul {
@@ -285,6 +290,10 @@ ul:has(.nav-li-elem) {
     }
 
     /* styles for FAQ section */
+
+    .faq-cont {
+        @apply grid w-full mt-7 gap-y-5;
+    }
 
     .faq-check > svg.faq-plus-icon {
         @apply peer-checked:rotate-45 transition-[rotate] duration-500 size-7;
@@ -384,7 +393,25 @@ ul:has(.nav-li-elem) {
         @apply flex items-center justify-center w-full gap-1 px-6 py-3 transition duration-300 ease-in-out rounded-full text-drk-green bg-lime-green md:w-100 hover:bg-black hover:text-lime-green;
     }
 
-    /* footer styles */
+    /* !contact us grid styles */
+
+    .contact-grid-item {
+        @apply grid gap-y-15 p-7.5 rounded-4xl md:p-12;
+    }
+
+    .contact-grid-item address {
+        @apply not-italic;
+    }
+
+    .contact-grid-item-bottom {
+        @apply grid gap-y-5;
+    }
+
+    .contact-grid-item-bottom > h6 {
+        @apply text-gray-1;
+    }
+
+    /* !footer styles */
 
     footer {
         @apply w-full pb-10 text-white pt-25 bg-drk-green;

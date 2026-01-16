@@ -1,11 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>Contact us page</h1>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact page</title>
+    <link rel="stylesheet" href="/public/output.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- !navbar and hero -->
+    <div class="nav-and-header wrapper">
+        <nav class="relative w-full py-5 bg-white">
+            <div class="relative flex items-center justify-between w-full">
+                <!-- logo -->
+                <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6759133e8734562de6520966_Logo%203.svg"
+                    loading="lazy" alt="logo" class="logo w-[32.5] h-10 md:w-43.75 md:h-12.5" />
+
+                <!-- right buttons -->
+                <div class="flex items-center gap-7 lg:w-full lg:justify-between">
+                    <!-- get started link -->
+                    <a href="./contact.html" class="transparent-link-with-arrow group lg:order-2 max-md:hidden ">
+                        <span class="transparent-link-text">Get started</span>
+                        <span class="drk-green-circle-with-arrow flex-center">
+                            <svg class="arrow-icon group-hover:rotate-0" xmlns="http://www.w3.org/2000/svg" width="32"
+                                height="32" viewBox="0 0 24 24">
+                                <path fill="#ffffff"
+                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <!-- navbar button -->
+
+                    <label for="check"
+                        class="lg:hidden peer flex items-center justify-center bg-lime-green w-10 h-10 rounded-[50%] md:size-16 cursor-pointer has-checked:bg-drk-green">
+                        <input type="checkbox" id="check" class="hidden peer" />
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72"
+                            class="size-5 md:size-8 peer-checked:fill-white">
+                            <path
+                                d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z">
+                            </path>
+                        </svg>
+                    </label>
+
+                    <!--nav links  -->
+                    <ul
+                        class="border-[1.3px] absolute top-0 left-0 py-2 translate-y-[-120%] w-full rounded-lg bg-gray-4 peer-has-checked:translate-y-15 peer-has-checked:md:translate-y-21 transition-[translate] duration-500 ease-out lg:static lg:inset-0 lg:translate-y-0 lg:flex lg:gap-2 lg:order-1 lg:w-fit lg:py-0 lg:bg-transparent lg:rounded-none lg:border-none lg:mx-auto lg:transition-none">
+                        <li class="nav-li-elem">
+                            <a href="./index.html" class="nav-anchor-elem">Home</a>
+                        </li>
+
+                        <li class="nav-li-elem">
+                            <a href="./about.html" class="nav-anchor-elem">About</a>
+                        </li>
+
+                        <!-- pages dropdown -->
+                        <li class="cursor-pointer nav-li-elem">
+                            <details>
+                                <summary class="flex items-center justify-between list-none">
+                                    <span class="nav-anchor-elem">Pages</span>
+                                    <svg class="pages-dropdown-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                        viewBox="0 -960 960 960" width="24px">
+                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                    </svg>
+                                    </span>
+                                </summary>
+                                <ul
+                                    class="border rounded-md my-3 py-2 [&>li]:px-2 [&>li]:py-1 lg:absolute lg:top-10 lg:bg-gray-4 lg:w-50 lg:my-0 right-0">
+                                    <li>
+                                        <a href="#" class="pages-dropdown-anchor-elem">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="./about.html" class="pages-dropdown-anchor-elem">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="./classes.html" class="pages-dropdown-anchor-elem">Classes</a>
+                                    </li>
+                                    <li>
+                                        <a href="./packages.html" class="pages-dropdown-anchor-elem">Packages</a>
+                                    </li>
+                                    <li>
+                                        <a href="./blog.html" class="pages-dropdown-anchor-elem">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="./contact.html" class="pages-dropdown-anchor-elem">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="./privacy-policy.html" class="pages-dropdown-anchor-elem">Privacy
+                                            Policy</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li class="nav-li-elem">
+                            <a href="./classes.html" class="nav-anchor-elem">Classes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header
+            class="bg-[url(https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756e0e3c737aa35148e9647_bg-pattern.avif)] bg-no-repeat bg-top-left">
+            <div class="grid text-center justify-items-center gap-y-5">
+                <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67541edce848d98aa31289bb_bc0f30c5d0f4115ed9724983d546ec13_hero-image.avif"
+                    alt="picture of gym trainer" class="size-62.5 rounded-[50%] object-cover object-[100%_50%]">
+                <h1 class="text-4xl min-[480px]:text-[2.625rem] min-[768px]:text-6xl min-[992px]:text-[4rem]">Schedule a
+                    call with me to
+                    see if I can
+                    help.</h1>
+            </div>
+        </header>
+
+    </div>
+
+    <main class="wrapper">
+        <section>
+            <!-- contact info grid -->
+            <div class="grid gap-7.5 md:grid-cols-2 lg:grid-cols-3">
+                <!-- 1 -->
+                <div class="contact-grid-item bg-gray-3">
+                    <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/675831a80ce513b91fd8d9ec_contact-icon-01.svg"
+                        alt="headphones icon">
+
+                    <address class="contact-grid-item-bottom">
+                        <h6 class="heading">Feel free to call me:</h6>
+
+                        <div class="[&>p]:font-bold">
+                            <p>+(91) 125 879 786</p>
+                            <p>+(84) 578 666 333</p>
+                        </div>
+                    </address>
+                </div>
+
+                <!-- 2 -->
+                <div class="contact-grid-item bg-drk-green">
+                    <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/675831a88c0d33c8a5a19953_contact-icon-02.svg"
+                        loading="eager" alt="icon" class="contact-icon">
+
+                    <div class="contact-grid-item-bottom">
+                        <h6 class="text-white">Follow me on:</h6>
+
+                        <div class="social-links white-social-links">
+                            <a href="#" class="social-link">
+                                <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756bdf9ea6713ed5d05a42d_facebook.svg"
+                                    alt="Facebook icon" />
+                            </a>
+                            <a href="#" class="social-link">
+                                <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/675bcd60bd1b8a5d457847be_linkdin.svg"
+                                    alt="Linkedin icon" />
+                            </a>
+                            <a href="#" class="social-link">
+                                <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756bdf9a58ca16e48d8e66f_youtube.svg"
+                                    alt="Youtube icon" />
+                            </a>
+                            <a href="#" class="social-link">
+                                <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6756bdf9865da3dddcac3e63_instagram.svg"
+                                    alt="Instagram icon" />
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contact-grid-item bg-gray-4">
+                    <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/675831a896f0d66c35d226ac_contact-icon-03.svg"
+                        loading="eager" alt="address pin icon">
+
+                    <address class="contact-grid-item-bottom">
+                        <h6>Address:</h6>
+                        <p class="font-semibold text-[22px] font-[GeneralSans]">Norman street, Banking road, Sydney NSW
+                            5000
+                        </p>
+                    </address>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- !FAQ -->
+        <section class="grid justify-items-center">
+            <div class="md:max-w-185">
+                <h2 class="text-center">Frequently Asked Questions</h2>
+
+                <!-- questions container -->
+                <div class="mt-10 faq-cont">
+                    <!-- question and answer 1 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                How do I choose the right plan for me?
+                            </h4>
+
+                            <label for="faq-check-1" class="faq-check">
+                                <input type="checkbox" id="faq-check-1" class="hidden peer" />
+                                <svg class="faq-plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                    fill="#000000">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </label>
+                        </div>
+
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500">
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    We recommend starting with a consultation to
+                                    discuss your fitness goals and preferences.
+                                    This way, we can tailor a plan that suits
+                                    your individual needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- question and answer 2 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                What if I miss a scheduled training session?
+                            </h4>
+
+                            <label for="faq-check-2" class="faq-check">
+                                <input type="checkbox" id="faq-check-2" class="hidden peer" />
+                                <svg class="faq-plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                    fill="#000000">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </label>
+                        </div>
+
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500">
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    If you miss a scheduled training session,
+                                    please contact your trainer as soon as
+                                    possible to discuss rescheduling options. We
+                                    understand that life can be unpredictable,
+                                    and we are here to help you stay on track
+                                    with your fitness goals.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- question and answer 3 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                Can I switch my plan later?
+                            </h4>
+
+                            <label for="faq-check-3" class="faq-check">
+                                <input type="checkbox" id="faq-check-3" class="hidden peer" />
+                                <svg class="faq-plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                    fill="#000000">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </label>
+                        </div>
+
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500">
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    Yes, you can switch your plan at any time.
+                                    We understand that your needs may change,
+                                    and we are flexible in accommodating those
+                                    changes to ensure you have the best
+                                    experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- question and answer 4 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                How do I contact my trainer for support?
+                            </h4>
+
+                            <label for="faq-check-4" class="faq-check">
+                                <input type="checkbox" id="faq-check-4" class="hidden peer" />
+                                <svg class="faq-plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                    fill="#000000">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </label>
+                        </div>
+
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500">
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    You can contact your trainer for support by
+                                    sending them an email or a message through
+                                    the training app. They are available to
+                                    assist you with any questions or concerns
+                                    you may have.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- question and answer 5 -->
+                    <div class="question-and-answer">
+                        <!-- question cont -->
+                        <div class="relative flex justify-between peer">
+                            <h4 class="question">
+                                Are there any long term commitments?
+                            </h4>
+
+                            <label for="faq-check-5" class="faq-check">
+                                <input type="checkbox" id="faq-check-5" class="hidden peer" />
+                                <svg class="faq-plus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                    fill="#000000">
+                                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                                </svg>
+                            </label>
+                        </div>
+
+                        <!-- answer cont -->
+                        <div
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-[&:has(input:checked)]:grid-rows-[1fr] duration-500">
+                            <div class="overflow-hidden">
+                                <p class="answer">
+                                    No, there are no long-term commitments
+                                    required. You have the flexibility to choose
+                                    a plan that fits your current needs and can
+                                    adjust or cancel at any time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- !footer -->
+    <footer>
+        <!-- wrapper for content -->
+        <div class="grid gap-10 mx-auto wrapper md:grid-cols-2 md:gap-8 xl:grid-cols-3 xl:gap-10">
+            <!-- logo and contact -->
+            <div class="grid gap-y-8">
+                <a href="./index.html" class="w-fit">
+                    <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67591855de7e3fb37df0122b_gymtrainer-light.svg"
+                        alt="logo" class="w-42.5 h-12.5" />
+                </a>
+
+                <address class="grid gap-5 not-italic">
+                    <!-- feel free to call me cont -->
+                    <div class="flex gap-3">
+                        <!-- phone logo -->
+                        <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67580e862f4a146ac9e43a70_footer-icon-01.svg"
+                            loading="eager" alt="telephone icon" class="h-fit" />
+
+                        <!-- contacts -->
+                        <div class="grid gap-y-2">
+                            <p>Feel free to call me</p>
+                            <strong>+(91) 125 879 786</strong>
+                            <strong>+(84) 578 666 333</strong>
+                        </div>
+                    </div>
+
+                    <!-- email me cont -->
+                    <div class="flex gap-3">
+                        <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67580e86d3bbcf24cadb4bbc_footer-icon-02.svg"
+                            loading="eager" alt="email icon" class="h-fit" />
+
+                        <div class="grid gap-y-2">
+                            <p>Email me on</p>
+                            <strong>example@gmail.com</strong>
+                        </div>
+                    </div>
+                </address>
+
+                <p>
+                    Designed by
+                    <a href="https://webestica.com/" class="text-lime-green hover:text-white">Webstica</a>, Powered by
+                    <a href="https://webflow.com/" class="text-lime-green hover:text-white">Webflow</a>
+                </p>
+            </div>
+
+            <!-- page links cont -->
+            <div class="flex flex-col gap-10 md:flex-row md:gap-20">
+                <!-- pages links -->
+                <div>
+                    <h5 class="footer-subheading">Pages link</h5>
+
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" target="_blank">Home</a>
+                        <a href="./about.html" class="footer-link" target="_blank">About</a>
+                        <a href="./classes.html" class="footer-link" target="_blank">Classes</a>
+                        <a href="./packages.html" class="footer-link" target="_blank">Packages</a>
+                        <a href="./blog.html" class="footer-link" target="_blank">Blog</a>
+                        <a href="./contact.html" class="footer-link" target="_blank">Contact</a>
+                        <a href="./privacy-policy.html" class="footer-link" target="_blank">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!-- utility pages -->
+                <div>
+                    <h5 class="footer-subheading">Utility pages</h5>
+
+                    <div class="footer-links">
+                        <a href="http://" class="footer-link" target="_blank">Style Guide</a>
+                        <a class="footer-link" target="_blank">Instructions</a>
+                        <a class="footer-link" target="_blank">Licenses</a>
+                        <a class="footer-link" target="_blank">Changelog</a>
+                        <a class="footer-link" target="_blank">Link in Bio</a>
+                        <a class="footer-link" target="_blank">Error 404</a>
+                        <a class="footer-link" target="_blank">Password Protected</a>
+                        <a class="footer-link" target="_blank">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="[&_label]:hidden">
+                <h5 class="footer-subheading">Send me a message</h5>
+
+                <div class="grid mt-4 gap-y-6">
+                    <div class="mt-3">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" class="footer-input" required />
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" class="footer-input" required />
+                    </div>
+
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Message" rows="4" required
+                            class="footer-input"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="px-4 py-2.5 mt-1 text-base text-black rounded-lg bg-lime-green">
+                    Send message
+                </button>
+            </form>
+        </div>
+    </footer>
+</body>
+
 </html>
