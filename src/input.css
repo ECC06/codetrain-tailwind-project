@@ -191,7 +191,11 @@ div:has(header) {
 
     /* flex not needed, it's already on the cards */
     .service-card {
-        @apply flex-col justify-between rounded-2xl md:w-[50%] lg:w-[33%];
+        @apply flex-col justify-between rounded-2xl;
+    }
+
+    .homepage.service-card {
+        @apply lg:w-[33%] md:w-[50%];
     }
 
     .service-card-text-cont {
