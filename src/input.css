@@ -8,9 +8,10 @@
     font-weight: 100 1000;
     src: url(https://cdn.jsdelivr.net/fontsource/fonts/dm-sans:vf@latest/latin-wght-normal.woff2)
         format("woff2-variations");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* general sans */
@@ -40,21 +41,31 @@
     --testimonial-image-size: 70px;
 }
 
-/* .nav-and-header {
-    z-index: 0;
-} */
-
 nav {
-    /* z-index: -3; */
-}
-
-.nav-and-header header {
-    /* z-index: -5; */
+    z-index: 3;
 }
 
 /* selects links container */
 ul:has(.nav-li-elem) {
-    /* z-index: -4; */
+    z-index: 2;
+}
+
+div:has(header) {
+    z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .desktop-hero-bg {
+        background-image:
+            url("https://cdn.prod.website-files.com/6687b74737730a710569f0d2/675a91f8ec27dd88d93806de_bg-hero-pattern.avif"),
+            linear-gradient(
+                100deg,
+                var(--color-drk-green),
+                var(--color-drk-green),
+                transparent
+            ),
+            url("https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67541edce848d98aa31289bb_bc0f30c5d0f4115ed9724983d546ec13_hero-image.avif");
+    }
 }
 
 @layer base {
@@ -89,6 +100,71 @@ ul:has(.nav-li-elem) {
 }
 
 @layer components {
+    /* !navbar styles */
+    nav {
+        @apply flex items-center justify-between w-full relative py-7.5 bg-white;
+    }
+
+    .nav-logo {
+        @apply w-[32.5] h-10 md:w-43.75 md:h-12.5;
+    }
+
+    ul.desktop-nav-links {
+        @apply hidden lg:flex;
+    }
+
+    /* cont */
+    .nav-right-buttons {
+        @apply flex items-center gap-7;
+    }
+
+    .hamburger-btn {
+        @apply lg:hidden flex items-center justify-center bg-lime-green size-11 rounded-[50%] md:size-12.5 cursor-pointer has-checked:bg-drk-green;
+    }
+
+    .hamburger-btn-icon {
+        @apply size-6 md:size-7 peer-checked:fill-white;
+    }
+
+    ul.mobile-nav-links {
+        @apply border-[1.3px] bg-gray-4 rounded-lg py-2 absolute -translate-y-[150%] transition duration-500 ease-in-out md:rounded-xl md:-translate-y-[170%];
+    }
+
+    ul.mobile-nav-links:has(~ .header-with-green-h1) {
+        @apply min-h-42.5;
+    }
+
+    /* styles for li elements containing anchor tags in the nav bar */
+    .nav-li-elem {
+        @apply px-3 pt-2 text-lg font-medium text-drk-green;
+    }
+
+    summary.pages-link-text-and-button {
+        @apply flex items-center justify-between list-none;
+    }
+
+    /* pages dropdown icon */
+    .pages-dropdown-icon {
+        @apply ml-0.5 mt-0.5 fill-drk-green;
+    }
+
+    .pages-dropdown-mobile {
+        @apply border rounded-md my-3 py-2 [&>li]:px-2 [&>li]:py-1 left-0 top-0 lg:top-10 lg:bg-gray-4 lg:w-50 lg:my-0 right-0;
+    }
+
+    .pages-dropdown-desktop {
+        @apply border rounded-md py-2 [&>li]:px-2 [&>li]:py-1 left-0 top-0 lg:absolute lg:top-10 lg:ml-1 lg:rounded-[10px] lg:bg-gray-4 lg:w-50;
+    }
+
+    /* styles for the lime green link with an arrow icon */
+    .lime-green-link {
+        @apply flex h-12 text-xl font-medium;
+    }
+
+    .lime-green-link > span.lime-btn {
+        @apply flex items-center px-6 py-4 text-base rounded-full bg-lime-green;
+    }
+
     /* styles for white and black circular icons with an arrow in the middle */
     .arrow-with-circle {
         @apply grid place-items-center rounded-[50%] size-12;
@@ -111,67 +187,29 @@ ul:has(.nav-li-elem) {
         @apply rounded-[50%] bg-drk-green size-12.5 flex;
     }
 
-    /* !pages dropdown icon */
-    .pages-dropdown-icon {
-        @apply ml-0.5 mt-0.5 fill-drk-green;
-    }
-
-    /* !styles for li elements containing anchor tags in the nav bar */
-    .nav-li-elem {
-        @apply px-3 py-1 text-lg font-medium text-drk-green lg:text-xl;
-    }
-
-    /*!styles for anchor tags in the navbar  */
-    .nav-anchor-elem,
-    .pages-dropdown-anchor-elem {
-        /* When the user hovers over the anchor element, create an after pseudo-element and give it a position absolute. 
-        
-        Only do this when the vw is >=640px */
-        @apply relative transition ease-in duration-250 md:hover:after:absolute;
-    }
-
-    .nav-anchor-elem::after,
-    .pages-dropdown-anchor-elem::after {
-        @apply left-0 w-full h-1 -bottom-2 bg-lime-green;
-    }
-
-    /* !styles for the unordered list in the navbar.
-    they are applied when vw >= 1024px */
-    .links-desktop-styles {
-        @apply static inset-0 z-auto flex gap-2 translate-y-0 border-0;
-    }
-
-    /* !styles for the lime green link with an arrow icon */
-    .lime-green-link {
-        @apply flex h-12 text-xl font-medium;
-    }
-
-    .lime-green-link > span.lime-btn {
-        @apply flex items-center px-6 py-4 text-base rounded-full bg-lime-green;
-    }
-
     /* !styles for service cards (found on homepage, contact us page)  */
 
+    /* flex not needed, it's already on the cards */
     .service-card {
-        @apply content-between rounded-2xl;
+        @apply flex-col justify-between rounded-2xl md:w-[50%] lg:w-[33%];
     }
 
     .service-card-text-cont {
-        @apply p-5 md:p-7.5 h-[50%] lg:h-[40%];
+        @apply p-5 md:p-7.5 h-[40%];
     }
 
     .service-card-text-cont h3 {
-        @apply lg:text-2xl xl:xl:text-3xl;
+        @apply text-2xl lg:text-[22px] xl:text-3xl;
     }
 
     .service-card-text-cont p {
-        @apply mt-4 text-drk-green lg:text-xl;
+        @apply mt-4 text-drk-green lg:text-[17px] xl:text-xl;
     }
 
     /* div containing image and icon */
     .service-card-bottom-cont {
         /* w-[455px] h-[341px] */
-        @apply relative h-[50%] lg:lg:h-[60%] overflow-hidden rounded-2xl;
+        @apply relative lg:h-[55%] overflow-hidden rounded-2xl;
     }
 
     /* applies the same transition the image and icon in the card*/
@@ -445,5 +483,15 @@ ul:has(.nav-li-elem) {
 
     .flex-center {
         @apply flex items-center justify-center;
+    }
+
+    /* When the user hovers over the anchor element, create an after pseudo-element and give it a position absolute */
+    .green-underline {
+        @apply relative transition ease-in duration-250 md:hover:after:absolute;
+    }
+
+    /* adds a green underline under the link's name on hover */
+    .green-underline::after {
+        @apply left-0 w-full h-1 -bottom-2 bg-lime-green;
     }
 }

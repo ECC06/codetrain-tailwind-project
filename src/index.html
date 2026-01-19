@@ -11,100 +11,150 @@
 
 <body>
     <!-- !navbar and hero -->
-    <div class="nav-and-header wrapper">
-        <nav class="relative w-full py-5 bg-white">
-            <div class="relative flex items-center justify-between w-full">
-                <!-- logo -->
-                <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6759133e8734562de6520966_Logo%203.svg"
-                    loading="lazy" alt="logo" class="logo w-[32.5] h-10 md:w-43.75 md:h-12.5" />
+    <div class="wrapper">
+        <nav class="peer">
+            <!-- logo -->
+            <img src="https://cdn.prod.website-files.com/6687b74737730a710569f0d2/6759133e8734562de6520966_Logo%203.svg"
+                alt="logo" />
 
-                <!-- right buttons -->
-                <div class="flex items-center gap-7 lg:w-full lg:justify-between">
-                    <!-- get started link -->
-                    <a href="./contact.html" class="transparent-link-with-arrow group lg:order-2 max-md:hidden ">
-                        <span class="transparent-link-text">Get started</span>
-                        <span class="drk-green-circle-with-arrow flex-center">
-                            <svg class="arrow-icon group-hover:rotate-0" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24">
-                                <path fill="#ffffff"
-                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
+            <!-- desktop nav links (hidden on mobile and tablet) -->
+            <ul class="desktop-nav-links">
+                <li class="nav-li-elem">
+                    <a href="./index.html" class="green-underline">Home</a>
+                </li>
+
+                <li class="nav-li-elem">
+                    <a href="./about.html" class="green-underline">About</a>
+                </li>
+
+                <!-- pages dropdown -->
+                <li class="relative cursor-pointer nav-li-elem">
+                    <details>
+                        <summary class="pages-link-text-and-button">
+                            <span class="green-underline">Pages</span>
+                            <svg class="pages-dropdown-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px">
+                                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
                             </svg>
-                        </span>
-                    </a>
+                            </span>
+                        </summary>
+                        <ul class="pages-dropdown-desktop">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="./classes.html">Classes</a>
+                            </li>
+                            <li>
+                                <a href="./packages.html">Packages</a>
+                            </li>
+                            <li>
+                                <a href="./blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a href="./contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="./privacy-policy.html">Privacy
+                                    Policy</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
 
-                    <!-- navbar button -->
+                <li class="nav-li-elem">
+                    <a href="./classes.html" class="green-underline">Classes</a>
+                </li>
+            </ul>
 
-                    <label for="check"
-                        class="lg:hidden peer flex items-center justify-center bg-lime-green w-10 h-10 rounded-[50%] md:size-16 cursor-pointer has-checked:bg-drk-green">
-                        <input type="checkbox" id="check" class="hidden peer" />
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72"
-                            class="size-5 md:size-8 peer-checked:fill-white">
-                            <path
-                                d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z">
-                            </path>
+            <!-- right buttons (get started and hamburger) -->
+            <div class="nav-right-buttons">
+                <!-- get started link (shown on tablet size and above) -->
+                <a href="./contact.html" class="transparent-link-with-arrow group max-md:hidden ">
+                    <span class="transparent-link-text">Get started</span>
+                    <span class="drk-green-circle-with-arrow flex-center">
+                        <svg class="arrow-icon group-hover:rotate-0" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24">
+                            <path fill="#ffffff"
+                                d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
                         </svg>
-                    </label>
+                    </span>
+                </a>
 
-                    <!--nav links  -->
-                    <ul
-                        class="border-[1.3px] absolute top-0 left-0 py-2 translate-y-[-120%] w-full rounded-lg bg-gray-4 peer-has-checked:translate-y-15 peer-has-checked:md:translate-y-21 transition-[translate] duration-500 ease-out lg:static lg:inset-0 lg:translate-y-0 lg:flex lg:gap-2 lg:order-1 lg:w-fit lg:py-0 lg:bg-transparent lg:rounded-none lg:border-none lg:mx-auto lg:transition-none">
-                        <li class="nav-li-elem">
-                            <a href="./index.html" class="nav-anchor-elem">Home</a>
-                        </li>
-
-                        <li class="nav-li-elem">
-                            <a href="./about.html" class="nav-anchor-elem">About</a>
-                        </li>
-
-                        <!-- pages dropdown -->
-                        <li class="cursor-pointer nav-li-elem">
-                            <details>
-                                <summary class="flex items-center justify-between list-none">
-                                    <span class="nav-anchor-elem">Pages</span>
-                                    <svg class="pages-dropdown-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
-                                        viewBox="0 -960 960 960" width="24px">
-                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-                                    </svg>
-                                    </span>
-                                </summary>
-                                <ul
-                                    class="border rounded-md my-3 py-2 [&>li]:px-2 [&>li]:py-1 lg:absolute lg:top-10 lg:bg-gray-4 lg:w-50 lg:my-0 right-0">
-                                    <li>
-                                        <a href="#" class="pages-dropdown-anchor-elem">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="./about.html" class="pages-dropdown-anchor-elem">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="./classes.html" class="pages-dropdown-anchor-elem">Classes</a>
-                                    </li>
-                                    <li>
-                                        <a href="./packages.html" class="pages-dropdown-anchor-elem">Packages</a>
-                                    </li>
-                                    <li>
-                                        <a href="./blog.html" class="pages-dropdown-anchor-elem">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="./contact.html" class="pages-dropdown-anchor-elem">Contact</a>
-                                    </li>
-                                    <li>
-                                        <a href="./privacy-policy.html" class="pages-dropdown-anchor-elem">Privacy
-                                            Policy</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li>
-
-                        <li class="nav-li-elem">
-                            <a href="./classes.html" class="nav-anchor-elem">Classes</a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- hamburger button (shown by default and disappears when vw > 992px) -->
+                <label for="check" class="hamburger-btn">
+                    <input type="checkbox" id="check" class="hidden peer" />
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72 72"
+                        class="hamburger-btn-icon">
+                        <path
+                            d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z">
+                        </path>
+                    </svg>
+                </label>
             </div>
         </nav>
 
+        <!--mobile links -->
+        <ul class="wrapper peer-has-checked:translate-y-0 mobile-nav-links">
+            <li class="nav-li-elem">
+                <a href="./index.html">Home</a>
+            </li>
+
+            <li class="nav-li-elem">
+                <a href="./about.html">About</a>
+            </li>
+
+            <!-- pages dropdown -->
+            <li class="relative cursor-pointer nav-li-elem">
+                <details>
+                    <summary class="pages-link-text-and-button">
+                        <span>Pages</span>
+
+                        <svg class="pages-dropdown-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px">
+                            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                        </svg>
+                        </span>
+
+                    </summary>
+                    <ul class="pages-dropdown-mobile">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="./classes.html">Classes</a>
+                        </li>
+                        <li>
+                            <a href="./packages.html">Packages</a>
+                        </li>
+                        <li>
+                            <a href="./blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="./privacy-policy.html">Privacy
+                                Policy</a>
+                        </li>
+                    </ul>
+                </details>
+            </li>
+
+            <li class="nav-li-elem">
+                <a href="./classes.html">Classes</a>
+            </li>
+        </ul>
+
         <header
-            class="bg-drk-green rounded-lg text-white px-5 pt-5 pb-0 relative md:bg-[linear-gradient(100deg,var(--color-drk-green),var(--color-drk-green),transparent),url(https://cdn.prod.website-files.com/6687b74737730a710569f0d2/67541edce848d98aa31289bb_bc0f30c5d0f4115ed9724983d546ec13_hero-image.avif)] md:bg-no-repeat md:bg-cover md:pt-12 md:px-10 md:rounded-3xl">
+            class="relative px-5 pt-5 pb-0 text-white rounded-lg bg-drk-green md:bg-top md:bg-no-repeat md:bg-cover md:pt-12 md:px-10 md:rounded-3xl lg:bg-left desktop-hero-bg">
+            <!-- text cta and mobile image -->
             <div class="md:pr-[15%] lg:pr-[30%] xl:pr-[50%]">
                 <div class="flex flex-col gap-4">
                     <span class="text-[clamp(1.25rem,1.25vw+1rem,2rem)] font-[GeneralSans] font-semibold">Hi, I'm
@@ -176,7 +226,7 @@
             <!-- container of options, e.g "personal training" -->
             <div class="flex flex-col gap-8 mt-5 md:mt-12 md:flex-row">
                 <!-- option 1 -->
-                <div class="flex flex-col justify-between service-card bg-gray-4">
+                <div class="flex service-card bg-gray-4">
                     <!-- heading and text -->
                     <div class="service-card-text-cont">
                         <h3>Personal training</h3>
@@ -202,7 +252,7 @@
                 </div>
 
                 <!-- option 2 -->
-                <div class="hidden md:flex md:flex-col md:justify-between service-card bg-gray-3">
+                <div class="hidden md:flex service-card bg-gray-3">
                     <!-- heading and text -->
                     <div class="service-card-text-cont">
                         <h3>Nutritional guidance</h3>
@@ -227,7 +277,7 @@
                 </div>
 
                 <!-- option 3 -->
-                <div class="hidden lg:block service-card bg-gray-4">
+                <div class="hidden lg:flex service-card bg-gray-4">
                     <!-- heading and text -->
                     <div class="service-card-text-cont">
                         <h3>Online coaching</h3>
