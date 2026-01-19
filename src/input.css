@@ -127,7 +127,7 @@ div:has(header) {
     }
 
     ul.mobile-nav-links {
-        @apply border-[1.3px] bg-gray-4 rounded-lg py-2 absolute -translate-y-[150%] transition duration-500 ease-in-out md:rounded-xl md:-translate-y-[170%];
+        @apply border-[1.3px] bg-gray-4 rounded-lg py-2 absolute -translate-y-[200%] transition duration-500 ease-in-out md:rounded-xl;
     }
 
     ul.mobile-nav-links:has(~ .header-with-green-h1) {
@@ -153,7 +153,11 @@ div:has(header) {
     }
 
     .pages-dropdown-desktop {
-        @apply border rounded-md py-2 [&>li]:px-2 [&>li]:py-1 left-0 top-0 lg:absolute lg:top-10 lg:ml-1 lg:rounded-[10px] lg:bg-gray-4 lg:w-50;
+        @apply border rounded-md py-2 left-0 top-0 lg:absolute lg:top-10 lg:ml-1 lg:rounded-[10px] lg:bg-gray-4 lg:w-50;
+    }
+
+    .pages-dropdown-desktop li {
+        @apply px-4 py-1;
     }
 
     /* styles for the lime green link with an arrow icon */
