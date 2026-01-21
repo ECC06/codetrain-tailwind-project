@@ -494,12 +494,14 @@ div:has(header) {
     }
 
     /* When the user hovers over the anchor element, create an after pseudo-element and give it a position absolute */
-    .green-underline {
+    .desktop-nav-links a,
+    .pages-dropdown-desktop a {
         @apply relative transition ease-in duration-250 md:hover:after:absolute;
     }
 
     /* adds a green underline under the link's name on hover */
-    .green-underline::after {
+    .desktop-nav-links a::after,
+    .pages-dropdown-desktop a::after {
         @apply left-0 w-full h-1 -bottom-2 bg-lime-green;
     }
 }
